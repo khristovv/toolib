@@ -20,6 +20,7 @@ This repo is for personal reference and discovery — think of it as a living bo
 - [Developer Tools](#developer-tools)
 - [Productivity & Practice](#productivity-practice)
 - [Games & Tabletop](#games-tabletop)
+- [Reference & Research](#reference-research)
 
 ---
 
@@ -98,6 +99,26 @@ A minimalistic, highly customizable typing speed test. Features multiple test mo
 | **Source** | *(closed source)* |
 
 A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and Pathfinder. Build rooms, halls, and scenes in minutes — no downloads or sign-up required. Supports multiple map styles, custom assets, PNG/SVG/PDF export, and direct Roll20 integration.
+
+---
+
+### Reference & Research
+
+---
+
+#### Auto Catalog Archive
+
+<p align="center">
+    <img src="assets/thumbnails/autocatalogarchive.png" alt="Banner" width="120">
+</p>
+
+| | |
+|---|---|
+| **URL** | [autocatalogarchive.com](https://autocatalogarchive.com) |
+| **Source** | *(closed source)* |
+
+A massive digital archive of vintage automobile brochures and catalogs from manufacturers around the world. Explore high-quality scans of classic car marketing materials spanning decades, perfect for research, design inspiration, or nostalgic deep dives into automotive history.
+
 
 ---
 

@@ -40,3 +40,15 @@
     Pathfinder. Build rooms, halls, and scenes in minutes — no downloads or sign-up
     required. Supports multiple map styles, custom assets, PNG/SVG/PDF export, and
     direct Roll20 integration.
+
+
+- name: Auto Catalog Archive
+  url: https://autocatalogarchive.com
+  source: null
+  thumbnail: assets/thumbnails/autocatalogarchive.png
+  category: Reference & Research
+  description: >
+    A massive digital archive of vintage automobile brochures and catalogs from
+    manufacturers around the world. Explore high-quality scans of classic car
+    marketing materials spanning decades, perfect for research, design inspiration,
+    or nostalgic deep dives into automotive history.
