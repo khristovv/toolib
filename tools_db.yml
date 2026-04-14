@@ -33,7 +33,7 @@
 - name: Dungeon Scrawl
   url: https://www.dungeonscrawl.com
   source: null
-  thumbnail: assets/thumbnails/dungeonscrawl.webp
+  thumbnail: assets/thumbnails/dungeonscrawl.png
   category: Games & Tabletop
   description: >
     A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and
