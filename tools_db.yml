@@ -1,0 +1,42 @@
+- name: TerraInk
+  url: https://terraink.app
+  source: https://github.com/yousifamanuel/terraink
+  thumbnail: assets/thumbnails/terraink.svg
+  category: Design & Creative
+  description: >
+    A free, open-source cartographic poster engine that turns any location in the world
+    into a beautifully styled map poster — entirely in your browser. Powered by real
+    OpenStreetMap data, with rich theme customization, layer controls, custom typography,
+    and high-resolution PNG/PDF export.
+
+- name: Regex101
+  url: https://regex101.com
+  thumbnail: assets/thumbnails/regex101.png
+  source: null
+  category: Developer Tools
+  description: >
+    The gold standard online regex tester and debugger. Supports PCRE, Python, JavaScript,
+    Go, Java, C#/.NET, and Rust. Features live syntax highlighting, automatic step-by-step
+    explanation, a cheat sheet, community pattern library, debugger, unit test runner,
+    and a code generator.
+
+- name: Monkeytype
+  url: https://monkeytype.com
+  source: https://github.com/monkeytypegame/monkeytype
+  thumbnail: assets/thumbnails/monkeytype.png
+  category: Productivity & Practice
+  description: >
+    A minimalistic, highly customizable typing speed test. Features multiple test modes
+    (timed, word count, quotes, custom), real-time WPM and accuracy tracking, themes,
+    smooth caret animations, and an account system to track your progress over time.
+
+- name: Dungeon Scrawl
+  url: https://www.dungeonscrawl.com
+  source: null
+  thumbnail: assets/thumbnails/dungeonscrawl.webp
+  category: Games & Tabletop
+  description: >
+    A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and
+    Pathfinder. Build rooms, halls, and scenes in minutes — no downloads or sign-up
+    required. Supports multiple map styles, custom assets, PNG/SVG/PDF export, and
+    direct Roll20 integration.

@@ -1,0 +1,50 @@
+# Toolib 🧰
+
+> A curated personal library of cool websites and tools worth bookmarking.
+
+---
+
+## Introduction
+
+**Toolib** is a growing collection of websites, web apps, and online tools that I've found genuinely useful, impressive, or just plain fun. Each entry includes a short description, a link to the live tool, and source code where available.
+
+This repo is for personal reference and discovery — think of it as a living bookmarks bar, but organized and shareable.
+
+> ⚠️ This file is auto-generated from `tools.yml`. Don't edit it directly.
+
+---
+
+## Contents
+
+{% for category, tools in tools_by_category.items() %}
+- [{{ category }}](#{{ category | lower | replace(' ', '-') | replace('&', '') | replace('--', '-') }})
+{% endfor %}
+
+---
+
+## Library
+{% for category, tools in tools_by_category.items() %}
+
+### {{ category }}
+{% for tool in tools %}
+
+---
+
+#### {{ tool.name }}
+
+<p align="center">
+    <img src="{{ tool.thumbnail }}" alt="Banner" width="100">
+</p>
+
+| | |
+|---|---|
+| **URL** | [{{ tool.url | replace('https://', '') | replace('http://', '') }}]({{ tool.url }}) |
+| **Source** | {% if tool.source %}[{{ tool.source | replace('https://', '') }}]({{ tool.source }}){% else %}*(closed source)*{% endif %} |
+
+{{ tool.description | trim }}
+{% endfor %}
+
+---
+{% endfor %}
+
+*Last updated: {{ updated }}*
