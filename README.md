@@ -32,7 +32,7 @@ This repo is for personal reference and discovery — think of it as a living bo
 #### TerraInk
 
 <p align="center">
-    <img src="assets/thumbnails/terraink.svg" alt="Banner" width="100">
+    <img src="assets/thumbnails/terraink.svg" alt="Banner" width="120">
 </p>
 
 | | |
@@ -51,7 +51,7 @@ A free, open-source cartographic poster engine that turns any location in the wo
 #### Regex101
 
 <p align="center">
-    <img src="assets/thumbnails/regex101.png" alt="Banner" width="100">
+    <img src="assets/thumbnails/regex101.png" alt="Banner" width="120">
 </p>
 
 | | |
@@ -70,7 +70,7 @@ The gold standard online regex tester and debugger. Supports PCRE, Python, JavaS
 #### Monkeytype
 
 <p align="center">
-    <img src="assets/thumbnails/monkeytype.png" alt="Banner" width="100">
+    <img src="assets/thumbnails/monkeytype.png" alt="Banner" width="120">
 </p>
 
 | | |
@@ -89,7 +89,7 @@ A minimalistic, highly customizable typing speed test. Features multiple test mo
 #### Dungeon Scrawl
 
 <p align="center">
-    <img src="assets/thumbnails/dungeonscrawl.webp" alt="Banner" width="100">
+    <img src="assets/thumbnails/dungeonscrawl.png" alt="Banner" width="120">
 </p>
 
 | | |
