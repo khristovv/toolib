@@ -16,11 +16,11 @@ This repo is for personal reference and discovery — think of it as a living bo
 
 ## Contents
 
-- [Design & Creative](#design-creative)
+- [Design & Creative](#design--creative)
 - [Developer Tools](#developer-tools)
-- [Productivity & Practice](#productivity-practice)
-- [Games & Tabletop](#games-tabletop)
-- [Reference & Research](#reference-research)
+- [Productivity & Practice](#productivity--practice)
+- [Games & Tabletop](#games--tabletop)
+- [Reference & Research](#reference--research)
 
 ---
 
@@ -118,7 +118,6 @@ A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and
 | **Source** | *(closed source)* |
 
 A massive digital archive of vintage automobile brochures and catalogs from manufacturers around the world. Explore high-quality scans of classic car marketing materials spanning decades, perfect for research, design inspiration, or nostalgic deep dives into automotive history.
-
 
 ---
 
