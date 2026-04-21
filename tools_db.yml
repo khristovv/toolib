@@ -42,6 +42,16 @@
     direct Roll20 integration.
 
 
+- name: MuseScore
+  url: https://musescore.org/en
+  source: https://github.com/musescore/MuseScore
+  thumbnail: assets/thumbnails/musescore.svg
+  category: Music & Audio
+  description: >
+    A free, open-source WYSIWYG music notation editor for composing, arranging,
+    and printing sheet music. Supports a wide range of formats including MusicXML,
+    MIDI, and PDF export, with integrated audio playback for real-time score preview.
+
 - name: Auto Catalog Archive
   url: https://autocatalogarchive.com
   source: null

@@ -20,6 +20,7 @@ This repo is for personal reference and discovery — think of it as a living bo
 - [Developer Tools](#developer-tools)
 - [Productivity & Practice](#productivity--practice)
 - [Games & Tabletop](#games--tabletop)
+- [Music & Audio](#music--audio)
 - [Reference & Research](#reference--research)
 
 ---
@@ -99,6 +100,25 @@ A minimalistic, highly customizable typing speed test. Features multiple test mo
 | **Source** | *(closed source)* |
 
 A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and Pathfinder. Build rooms, halls, and scenes in minutes — no downloads or sign-up required. Supports multiple map styles, custom assets, PNG/SVG/PDF export, and direct Roll20 integration.
+
+---
+
+### Music & Audio
+
+---
+
+#### MuseScore
+
+<p align="center">
+    <img src="assets/thumbnails/musescore.svg" alt="Banner" width="120">
+</p>
+
+| | |
+|---|---|
+| **URL** | [musescore.org/en](https://musescore.org/en) |
+| **Source** | [github.com/musescore/MuseScore](https://github.com/musescore/MuseScore) |
+
+A free, open-source WYSIWYG music notation editor for composing, arranging, and printing sheet music. Supports a wide range of formats including MusicXML, MIDI, and PDF export, with integrated audio playback for real-time score preview.
 
 ---
 
