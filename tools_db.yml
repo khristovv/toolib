@@ -150,3 +150,16 @@
     typography, and other style properties, with a live preview of real
     components as you go. Copy the generated theme code straight into your
     project, so your shadcn/ui app doesn't look like every other one.
+
+- name: The Component Gallery
+  url: https://component.gallery
+  source: https://github.com/inbn/component-gallery
+  thumbnail: assets/thumbnails/thecomponentgallery.png
+  category: Reference & Research
+  description: >
+    A reference of user interface components collected from real-world design
+    systems. Each component, from accordions to tooltips, gets a description,
+    its common alternative names, and links to how dozens of design systems
+    implement it. Design systems are tagged by tech stack and by features like
+    code examples, accessibility guidance, and open-source availability, making
+    it easy to compare approaches before building your own.

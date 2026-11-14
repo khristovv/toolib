@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **13 tools** · 🗓️ **Last updated:** November 2026
+📚 **14 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -25,7 +25,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
-- [Reference & Research](#reference--research) (3)
+- [Reference & Research](#reference--research) (4)
 
 ---
 
@@ -247,6 +247,21 @@ A free interactive world map of real filming locations for movies and TV series,
 | **Source** | [github.com/tonyzedginidze/saasisdead](https://github.com/tonyzedginidze/saasisdead) |
 
 A searchable directory of open-source alternatives to the paid software you subscribe to. Commercial products are organized by category, from developer tools to design and email marketing, each paired with its list price and open-source replacements with live GitHub stats. New projects can be suggested or submitted via GitHub.
+
+---
+
+#### The Component Gallery
+
+<p align="center">
+    <img src="assets/thumbnails/thecomponentgallery.png" alt="The Component Gallery" width="571">
+</p>
+
+| | |
+|---|---|
+| **URL** | [component.gallery](https://component.gallery) |
+| **Source** | [github.com/inbn/component-gallery](https://github.com/inbn/component-gallery) |
+
+A reference of user interface components collected from real-world design systems. Each component, from accordions to tooltips, gets a description, its common alternative names, and links to how dozens of design systems implement it. Design systems are tagged by tech stack and by features like code examples, accessibility guidance, and open-source availability, making it easy to compare approaches before building your own.
 
 ---
 
