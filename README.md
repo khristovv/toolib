@@ -10,7 +10,7 @@
 
 This repo is for personal reference and discovery — think of it as a living bookmarks bar, but organized and shareable.
 
-> ⚠️ This file is auto-generated from `tools.yml`. Don't edit it directly.
+> ⚠️ This file is auto-generated from `tools_db.yml`. Don't edit it directly.
 
 ---
 
@@ -34,7 +34,7 @@ This repo is for personal reference and discovery — think of it as a living bo
 #### TerraInk
 
 <p align="center">
-    <img src="https://terraink.app/assets/banner.jpg" alt="TerraInk" width="600">
+    <img src="assets/thumbnails/terraink.svg" alt="TerraInk" width="600">
 </p>
 
 | | |
@@ -53,7 +53,7 @@ A free, open-source cartographic poster engine that turns any location in the wo
 #### Regex101
 
 <p align="center">
-    <img src="https://regex101.com/preview/" alt="Regex101" width="600">
+    <img src="assets/thumbnails/regex101.png" alt="Regex101" width="600">
 </p>
 
 | | |
@@ -72,7 +72,7 @@ The gold standard online regex tester and debugger. Supports PCRE, Python, JavaS
 #### Monkeytype
 
 <p align="center">
-    <img src="https://monkeytype.com/images/mtsocial.png" alt="Monkeytype" width="600">
+    <img src="assets/thumbnails/monkeytype.png" alt="Monkeytype" width="600">
 </p>
 
 | | |
@@ -91,7 +91,7 @@ A minimalistic, highly customizable typing speed test. Features multiple test mo
 #### Dungeon Scrawl
 
 <p align="center">
-    <img src="https://www.dungeonscrawl.com/_next/static/media/og.fcf1d031.png" alt="Dungeon Scrawl" width="600">
+    <img src="assets/thumbnails/dungeonscrawl.png" alt="Dungeon Scrawl" width="600">
 </p>
 
 | | |
@@ -141,4 +141,4 @@ A massive digital archive of vintage automobile brochures and catalogs from manu
 
 ---
 
-*Last updated: April 2026*
+*Last updated: November 2026*
