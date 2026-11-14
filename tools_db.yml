@@ -225,3 +225,15 @@
     data, and links to the docs and spec. Also lists the PostCSS plugins and
     polyfills that let you use a feature today, and which of them ship with
     postcss-preset-env.
+
+- name: Can I email
+  url: https://www.caniemail.com
+  source: https://github.com/hteumeuleu/caniemail
+  thumbnail: assets/thumbnails/caniemail.png
+  category: Developer Tools
+  description: >
+    Support tables for HTML and CSS in emails, in the spirit of Can I use. Look
+    up an HTML element, CSS property, or image format to see whether it works in
+    Gmail, Outlook, Apple Mail, and many other clients across webmail, desktop,
+    and mobile. Includes a scoreboard ranking clients by overall support, and
+    the community-maintained data is open source and available as JSON.

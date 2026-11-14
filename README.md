@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **19 tools** · 🗓️ **Last updated:** November 2026
+📚 **20 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
-- [Developer Tools](#developer-tools) (7)
+- [Developer Tools](#developer-tools) (8)
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
@@ -111,6 +111,21 @@ An open-source, offline-first API client and Git-friendly alternative to Postman
 | **Source** | [github.com/pastelsky/bundlephobia](https://github.com/pastelsky/bundlephobia) |
 
 A free, open-source tool for finding the cost of adding an npm package to your frontend bundle. Look up any package to see its minified and gzipped size, estimated download time on slow networks, and which dependencies make up its weight. Compare sizes across versions, check exports for tree- shaking, scan a whole package.json, and discover lighter alternatives.
+
+---
+
+#### Can I email
+
+<p align="center">
+    <img src="assets/thumbnails/caniemail.png" alt="Can I email" width="571">
+</p>
+
+| | |
+|---|---|
+| **URL** | [www.caniemail.com](https://www.caniemail.com) |
+| **Source** | [github.com/hteumeuleu/caniemail](https://github.com/hteumeuleu/caniemail) |
+
+Support tables for HTML and CSS in emails, in the spirit of Can I use. Look up an HTML element, CSS property, or image format to see whether it works in Gmail, Outlook, Apple Mail, and many other clients across webmail, desktop, and mobile. Includes a scoreboard ranking clients by overall support, and the community-maintained data is open source and available as JSON.
 
 ---
 
