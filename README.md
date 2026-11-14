@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **20 tools** · 🗓️ **Last updated:** November 2026
+📚 **21 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
-- [Developer Tools](#developer-tools) (8)
+- [Developer Tools](#developer-tools) (9)
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
@@ -171,6 +171,21 @@ A quick and simple editor for cron schedule expressions, made by Cronitor. Type 
 | **Source** | [github.com/csstools/cssdb](https://github.com/csstools/cssdb) |
 
 A database of CSS features tracked by how far they are in the process of becoming web standards, maintained by CSSTools. Each feature gets a stage, a short description, example code, browser support from MDN's compatibility data, and links to the docs and spec. Also lists the PostCSS plugins and polyfills that let you use a feature today, and which of them ship with postcss-preset-env.
+
+---
+
+#### Localtunnel
+
+<p align="center">
+    <img src="assets/thumbnails/localtunnel.svg" alt="Localtunnel" width="571">
+</p>
+
+| | |
+|---|---|
+| **URL** | [localtunnel.me](https://localtunnel.me) |
+| **Source** | [github.com/localtunnel/localtunnel](https://github.com/localtunnel/localtunnel) |
+
+A free, open-source tool that exposes a web server running on your machine through a public HTTPS URL, with no DNS or firewall changes. Install it with npm and run lt with your local port to get a shareable link that stays up while the process runs. Handy for sharing work in progress, testing webhooks against your local API, or checking your UI in cloud browsers.
 
 ---
 

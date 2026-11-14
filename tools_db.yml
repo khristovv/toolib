@@ -237,3 +237,15 @@
     Gmail, Outlook, Apple Mail, and many other clients across webmail, desktop,
     and mobile. Includes a scoreboard ranking clients by overall support, and
     the community-maintained data is open source and available as JSON.
+
+- name: Localtunnel
+  url: https://localtunnel.me
+  source: https://github.com/localtunnel/localtunnel
+  thumbnail: assets/thumbnails/localtunnel.svg
+  category: Developer Tools
+  description: >
+    A free, open-source tool that exposes a web server running on your machine
+    through a public HTTPS URL, with no DNS or firewall changes. Install it with
+    npm and run lt with your local port to get a shareable link that stays up
+    while the process runs. Handy for sharing work in progress, testing webhooks
+    against your local API, or checking your UI in cloud browsers.
