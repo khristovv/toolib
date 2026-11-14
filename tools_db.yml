@@ -87,3 +87,16 @@
     and reviewed alongside your code. Includes environments, pre/post-request
     scripting, assertions and tests, and a CLI for running collections in CI. No
     cloud sync or account required.
+
+- name: MonitorControl
+  url: https://github.com/MonitorControl/MonitorControl
+  source: https://github.com/MonitorControl/MonitorControl
+  thumbnail: assets/thumbnails/monitorcontrol.png
+  category: Productivity & Practice
+  description: >
+    A free, open-source macOS menu bar app that controls the brightness,
+    contrast, and volume of external displays as if they were native Apple
+    displays. Works with Apple keyboard brightness and media keys or custom
+    shortcuts and shows the native macOS on-screen indicators. Combines DDC
+    hardware control with software dimming, and can sync brightness across all
+    your screens.

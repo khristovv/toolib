@@ -99,6 +99,21 @@ A minimalistic, highly customizable typing speed test. Features multiple test mo
 
 ---
 
+#### MonitorControl
+
+<p align="center">
+    <img src="assets/thumbnails/monitorcontrol.png" alt="MonitorControl" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
+| **Source** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
+
+A free, open-source macOS menu bar app that controls the brightness, contrast, and volume of external displays as if they were native Apple displays. Works with Apple keyboard brightness and media keys or custom shortcuts and shows the native macOS on-screen indicators. Combines DDC hardware control with software dimming, and can sync brightness across all your screens.
+
+---
+
 ### Games & Tabletop
 
 ---
