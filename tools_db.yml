@@ -188,3 +188,15 @@
     communicate the basic properties, systems, and logics of our built
     environment, Dimensions.com is a global platform for increasing public and
     professional knowledge of life and design.
+
+- name: Carbon
+  url: https://carbon.now.sh
+  source: https://github.com/carbon-app/carbon
+  thumbnail: assets/thumbnails/carbon.png
+  category: Developer Tools
+  description: >
+    A free, open-source tool for creating and sharing beautiful images of your
+    source code. Paste a snippet or import a GitHub gist, then customize the
+    syntax theme, font, background, padding, and window style. Export as PNG or
+    SVG, copy straight to the clipboard, or share a link or embed. Community
+    plugins bring it into editors like IntelliJ IDEA and Xcode.

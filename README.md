@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **16 tools** · 🗓️ **Last updated:** November 2026
+📚 **17 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
-- [Developer Tools](#developer-tools) (4)
+- [Developer Tools](#developer-tools) (5)
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
@@ -111,6 +111,21 @@ An open-source, offline-first API client and Git-friendly alternative to Postman
 | **Source** | [github.com/pastelsky/bundlephobia](https://github.com/pastelsky/bundlephobia) |
 
 A free, open-source tool for finding the cost of adding an npm package to your frontend bundle. Look up any package to see its minified and gzipped size, estimated download time on slow networks, and which dependencies make up its weight. Compare sizes across versions, check exports for tree- shaking, scan a whole package.json, and discover lighter alternatives.
+
+---
+
+#### Carbon
+
+<p align="center">
+    <img src="assets/thumbnails/carbon.png" alt="Carbon" width="571">
+</p>
+
+| | |
+|---|---|
+| **URL** | [carbon.now.sh](https://carbon.now.sh) |
+| **Source** | [github.com/carbon-app/carbon](https://github.com/carbon-app/carbon) |
+
+A free, open-source tool for creating and sharing beautiful images of your source code. Paste a snippet or import a GitHub gist, then customize the syntax theme, font, background, padding, and window style. Export as PNG or SVG, copy straight to the clipboard, or share a link or embed. Community plugins bring it into editors like IntelliJ IDEA and Xcode.
 
 ---
 
