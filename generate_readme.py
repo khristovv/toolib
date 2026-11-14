@@ -29,7 +29,10 @@ def group_by_category(*, tools: list[dict]) -> dict[str, list[dict]]:
     for tool in tools:
         grouped[tool["category"]].append(tool)
 
-    return dict(grouped)
+    return {
+        category: sorted(grouped[category], key=lambda tool: tool["name"].casefold())
+        for category in sorted(grouped, key=str.casefold)
+    }
 
 
 def render(*, tools_by_category: dict, updated: str) -> str:

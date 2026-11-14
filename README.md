@@ -22,9 +22,9 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 
 - [Design & Creative](#design--creative)
 - [Developer Tools](#developer-tools)
-- [Productivity & Practice](#productivity--practice)
 - [Games & Tabletop](#games--tabletop)
 - [Music & Audio](#music--audio)
+- [Productivity & Practice](#productivity--practice)
 - [Reference & Research](#reference--research)
 
 ---
@@ -32,21 +32,6 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Library
 
 ### Design & Creative
-
----
-
-#### TerraInk
-
-<p align="center">
-    <img src="assets/thumbnails/terraink.svg" alt="TerraInk" width="600">
-</p>
-
-| | |
-|---|---|
-| **URL** | [terraink.app](https://terraink.app) |
-| **Source** | [github.com/yousifamanuel/terraink](https://github.com/yousifamanuel/terraink) |
-
-A free, open-source cartographic poster engine that turns any location in the world into a beautifully styled map poster — entirely in your browser. Powered by real OpenStreetMap data, with rich theme customization, layer controls, custom typography, and high-resolution PNG/PDF export.
 
 ---
 
@@ -80,22 +65,22 @@ A free, open-source interface design and prototyping app built in pure Rust, par
 
 ---
 
-### Developer Tools
-
----
-
-#### Regex101
+#### TerraInk
 
 <p align="center">
-    <img src="assets/thumbnails/regex101.png" alt="Regex101" width="600">
+    <img src="assets/thumbnails/terraink.svg" alt="TerraInk" width="600">
 </p>
 
 | | |
 |---|---|
-| **URL** | [regex101.com](https://regex101.com) |
-| **Source** | *(closed source)* |
+| **URL** | [terraink.app](https://terraink.app) |
+| **Source** | [github.com/yousifamanuel/terraink](https://github.com/yousifamanuel/terraink) |
 
-The gold standard online regex tester and debugger. Supports PCRE, Python, JavaScript, Go, Java, C#/.NET, and Rust. Features live syntax highlighting, automatic step-by-step explanation, a cheat sheet, community pattern library, debugger, unit test runner, and a code generator.
+A free, open-source cartographic poster engine that turns any location in the world into a beautifully styled map poster — entirely in your browser. Powered by real OpenStreetMap data, with rich theme customization, layer controls, custom typography, and high-resolution PNG/PDF export.
+
+---
+
+### Developer Tools
 
 ---
 
@@ -114,37 +99,18 @@ An open-source, offline-first API client and Git-friendly alternative to Postman
 
 ---
 
-### Productivity & Practice
-
----
-
-#### Monkeytype
+#### Regex101
 
 <p align="center">
-    <img src="assets/thumbnails/monkeytype.png" alt="Monkeytype" width="600">
+    <img src="assets/thumbnails/regex101.png" alt="Regex101" width="600">
 </p>
 
 | | |
 |---|---|
-| **URL** | [monkeytype.com](https://monkeytype.com) |
-| **Source** | [github.com/monkeytypegame/monkeytype](https://github.com/monkeytypegame/monkeytype) |
+| **URL** | [regex101.com](https://regex101.com) |
+| **Source** | *(closed source)* |
 
-A minimalistic, highly customizable typing speed test. Features multiple test modes (timed, word count, quotes, custom), real-time WPM and accuracy tracking, themes, smooth caret animations, and an account system to track your progress over time.
-
----
-
-#### MonitorControl
-
-<p align="center">
-    <img src="assets/thumbnails/monitorcontrol.png" alt="MonitorControl" width="600">
-</p>
-
-| | |
-|---|---|
-| **URL** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
-| **Source** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
-
-A free, open-source macOS menu bar app that controls the brightness, contrast, and volume of external displays as if they were native Apple displays. Works with Apple keyboard brightness and media keys or custom shortcuts and shows the native macOS on-screen indicators. Combines DDC hardware control with software dimming, and can sync brightness across all your screens.
+The gold standard online regex tester and debugger. Supports PCRE, Python, JavaScript, Go, Java, C#/.NET, and Rust. Features live syntax highlighting, automatic step-by-step explanation, a cheat sheet, community pattern library, debugger, unit test runner, and a code generator.
 
 ---
 
@@ -186,6 +152,40 @@ A free, open-source WYSIWYG music notation editor for composing, arranging, and 
 
 ---
 
+### Productivity & Practice
+
+---
+
+#### MonitorControl
+
+<p align="center">
+    <img src="assets/thumbnails/monitorcontrol.png" alt="MonitorControl" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
+| **Source** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
+
+A free, open-source macOS menu bar app that controls the brightness, contrast, and volume of external displays as if they were native Apple displays. Works with Apple keyboard brightness and media keys or custom shortcuts and shows the native macOS on-screen indicators. Combines DDC hardware control with software dimming, and can sync brightness across all your screens.
+
+---
+
+#### Monkeytype
+
+<p align="center">
+    <img src="assets/thumbnails/monkeytype.png" alt="Monkeytype" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [monkeytype.com](https://monkeytype.com) |
+| **Source** | [github.com/monkeytypegame/monkeytype](https://github.com/monkeytypegame/monkeytype) |
+
+A minimalistic, highly customizable typing speed test. Features multiple test modes (timed, word count, quotes, custom), real-time WPM and accuracy tracking, themes, smooth caret animations, and an account system to track your progress over time.
+
+---
+
 ### Reference & Research
 
 ---
@@ -205,21 +205,6 @@ A massive digital archive of vintage automobile brochures and catalogs from manu
 
 ---
 
-#### SaaS is Dead
-
-<p align="center">
-    <img src="assets/thumbnails/saasisdead.png" alt="SaaS is Dead" width="600">
-</p>
-
-| | |
-|---|---|
-| **URL** | [saasisdead.si](https://saasisdead.si) |
-| **Source** | [github.com/tonyzedginidze/saasisdead](https://github.com/tonyzedginidze/saasisdead) |
-
-A searchable directory of open-source alternatives to the paid software you subscribe to. Commercial products are organized by category, from developer tools to design and email marketing, each paired with its list price and open-source replacements with live GitHub stats. New projects can be suggested or submitted via GitHub.
-
----
-
 #### Movie Scene Map
 
 <p align="center">
@@ -232,6 +217,21 @@ A searchable directory of open-source alternatives to the paid software you subs
 | **Source** | *(closed source)* |
 
 A free interactive world map of real filming locations for movies and TV series, plus the real-world settings of video games, anime, and manga. Search a title to see where it was shot, or a place to see what was filmed there, with photos and Wikipedia links for each location. Sourced from Wikidata and film archives, with the full dataset downloadable as CC0 GeoJSON or CSV.
+
+---
+
+#### SaaS is Dead
+
+<p align="center">
+    <img src="assets/thumbnails/saasisdead.png" alt="SaaS is Dead" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [saasisdead.si](https://saasisdead.si) |
+| **Source** | [github.com/tonyzedginidze/saasisdead](https://github.com/tonyzedginidze/saasisdead) |
+
+A searchable directory of open-source alternatives to the paid software you subscribe to. Commercial products are organized by category, from developer tools to design and email marketing, each paired with its list price and open-source replacements with live GitHub stats. New projects can be suggested or submitted via GitHub.
 
 ---
 
