@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **15 tools** · 🗓️ **Last updated:** November 2026
+📚 **16 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -25,7 +25,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
-- [Reference & Research](#reference--research) (4)
+- [Reference & Research](#reference--research) (5)
 
 ---
 
@@ -232,6 +232,21 @@ A minimalistic, highly customizable typing speed test. Features multiple test mo
 | **Source** | *(closed source)* |
 
 A massive digital archive of vintage automobile brochures and catalogs from manufacturers around the world. Explore high-quality scans of classic car marketing materials spanning decades, perfect for research, design inspiration, or nostalgic deep dives into automotive history.
+
+---
+
+#### Dimensions
+
+<p align="center">
+    <img src="assets/thumbnails/dimensions.jpg" alt="Dimensions" width="571">
+</p>
+
+| | |
+|---|---|
+| **URL** | [www.dimensions.com](https://www.dimensions.com) |
+| **Source** | *(closed source)* |
+
+Dimensions.com is an ongoing reference database of dimensioned drawings documenting the standard measurements and sizes of the everyday objects and spaces that make up our world. Created as a universal resource to better communicate the basic properties, systems, and logics of our built environment, Dimensions.com is a global platform for increasing public and professional knowledge of life and design.
 
 ---
 

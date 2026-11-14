@@ -175,3 +175,16 @@
     size, estimated download time on slow networks, and which dependencies make
     up its weight. Compare sizes across versions, check exports for tree-
     shaking, scan a whole package.json, and discover lighter alternatives.
+
+- name: Dimensions
+  url: https://www.dimensions.com
+  source: null
+  thumbnail: assets/thumbnails/dimensions.jpg
+  category: Reference & Research
+  description: >
+    Dimensions.com is an ongoing reference database of dimensioned drawings
+    documenting the standard measurements and sizes of the everyday objects and
+    spaces that make up our world. Created as a universal resource to better
+    communicate the basic properties, systems, and logics of our built
+    environment, Dimensions.com is a global platform for increasing public and
+    professional knowledge of life and design.
