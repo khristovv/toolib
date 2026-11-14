@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **21 tools** · 🗓️ **Last updated:** November 2026
+📚 **22 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -41,12 +41,13 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 - [Productivity & Practice](#productivity--practice) (2)
   - [MonitorControl](#monitorcontrol)
   - [Monkeytype](#monkeytype)
-- [Reference & Research](#reference--research) (5)
+- [Reference & Research](#reference--research) (6)
   - [Auto Catalog Archive](#auto-catalog-archive)
   - [Dimensions](#dimensions)
   - [Movie Scene Map](#movie-scene-map)
   - [SaaS is Dead](#saas-is-dead)
   - [The Component Gallery](#the-component-gallery)
+  - [Wayback Machine](#wayback-machine)
 
 ---
 
@@ -388,6 +389,21 @@ A searchable directory of open-source alternatives to the paid software you subs
 | **Source** | [github.com/inbn/component-gallery](https://github.com/inbn/component-gallery) |
 
 A reference of user interface components collected from real-world design systems. Each component, from accordions to tooltips, gets a description, its common alternative names, and links to how dozens of design systems implement it. Design systems are tagged by tech stack and by features like code examples, accessibility guidance, and open-source availability, making it easy to compare approaches before building your own.
+
+---
+
+#### Wayback Machine
+
+<p align="center">
+    <img src="assets/thumbnails/waybackmachine.png" alt="Wayback Machine" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [web.archive.org](https://web.archive.org) |
+| **Source** | *(closed source)* |
+
+The Internet Archive's digital archive of the web, preserving snapshots of websites as they appeared over time. Browse any URL's capture history on a calendar view, compare versions, and save pages on demand with Save Page Now. Also offers site-wide search, change tracking between captures, and an API for programmatic access.
 
 ---
 

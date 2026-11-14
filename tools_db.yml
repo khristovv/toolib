@@ -249,3 +249,15 @@
     npm and run lt with your local port to get a shareable link that stays up
     while the process runs. Handy for sharing work in progress, testing webhooks
     against your local API, or checking your UI in cloud browsers.
+
+- name: Wayback Machine
+  url: https://web.archive.org
+  source: null
+  thumbnail: assets/thumbnails/waybackmachine.png
+  category: Reference & Research
+  description: >
+    The Internet Archive's digital archive of the web, preserving snapshots of
+    websites as they appeared over time. Browse any URL's capture history on a
+    calendar view, compare versions, and save pages on demand with Save Page
+    Now. Also offers site-wide search, change tracking between captures, and an
+    API for programmatic access.
