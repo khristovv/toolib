@@ -21,11 +21,32 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
+  - [Excalidraw](#excalidraw)
+  - [FigCraft](#figcraft)
+  - [TerraInk](#terraink)
 - [Developer Tools](#developer-tools) (9)
+  - [Bruno](#bruno)
+  - [Bundlephobia](#bundlephobia)
+  - [Can I email](#can-i-email)
+  - [Carbon](#carbon)
+  - [Crontab Guru](#crontab-guru)
+  - [cssdb](#cssdb)
+  - [Localtunnel](#localtunnel)
+  - [Regex101](#regex101)
+  - [tweakcn](#tweakcn)
 - [Games & Tabletop](#games--tabletop) (1)
+  - [Dungeon Scrawl](#dungeon-scrawl)
 - [Music & Audio](#music--audio) (1)
+  - [MuseScore](#musescore)
 - [Productivity & Practice](#productivity--practice) (2)
+  - [MonitorControl](#monitorcontrol)
+  - [Monkeytype](#monkeytype)
 - [Reference & Research](#reference--research) (5)
+  - [Auto Catalog Archive](#auto-catalog-archive)
+  - [Dimensions](#dimensions)
+  - [Movie Scene Map](#movie-scene-map)
+  - [SaaS is Dead](#saas-is-dead)
+  - [The Component Gallery](#the-component-gallery)
 
 ---
 

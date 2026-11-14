@@ -21,7 +21,10 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 {% for category, tools in tools_by_category.items() %}
-- [{{ category }}](#{{ category | lower | replace(' ', '-') | replace('&', '') }}) ({{ tools | length }})
+- [{{ category }}](#{{ category_anchors[category] }}) ({{ tools | length }})
+{% for tool in tools %}
+  - [{{ tool.name }}](#{{ tool.anchor }})
+{% endfor %}
 {% endfor %}
 
 ---

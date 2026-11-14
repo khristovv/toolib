@@ -6,6 +6,7 @@ Usage:
     python generate_readme.py
 """
 
+import re
 import yaml
 from jinja2 import Environment, FileSystemLoader
 from PIL import Image
@@ -75,7 +76,36 @@ def group_by_category(*, tools: list[dict]) -> dict[str, list[dict]]:
     }
 
 
-def render(*, tools_by_category: dict, updated: str) -> str:
+def github_anchor(text: str, *, used: set[str]) -> str:
+    """Anchor GitHub generates for a heading: lowercase, punctuation and emoji
+    dropped, spaces turned into dashes, and -1, -2, ... appended to repeats."""
+    base = re.sub(r"[^\w\- ]", "", text.lower()).replace(" ", "-")
+    anchor, n = base, 0
+
+    while anchor in used:
+        n += 1
+        anchor = f"{base}-{n}"
+
+    used.add(anchor)
+    return anchor
+
+
+def add_anchors(*, tools_by_category: dict[str, list[dict]]) -> dict[str, str]:
+    """Set each tool's anchor and return each category's, in README heading order."""
+    # Headings that come before the library in the template.
+    used = {"toolib-", "introduction", "contents", "library"}
+    category_anchors = {}
+
+    for category, tools in tools_by_category.items():
+        category_anchors[category] = github_anchor(category, used=used)
+
+        for tool in tools:
+            tool["anchor"] = github_anchor(tool["name"], used=used)
+
+    return category_anchors
+
+
+def render(*, tools_by_category: dict, category_anchors: dict, updated: str) -> str:
     env = Environment(
         loader=FileSystemLoader(str(ROOT)),
         trim_blocks=True,
@@ -86,6 +116,7 @@ def render(*, tools_by_category: dict, updated: str) -> str:
     template = env.get_template(TEMPLATE_FILE)
     return template.render(
         tools_by_category=tools_by_category,
+        category_anchors=category_anchors,
         updated=updated,
     )
 
@@ -96,8 +127,9 @@ def generate() -> None:
         tool["thumbnail_width"] = thumbnail_width(path=ROOT / tool["thumbnail"])
 
     tools_by_category = group_by_category(tools=tools)
+    category_anchors = add_anchors(tools_by_category=tools_by_category)
     updated = datetime.now(timezone.utc).strftime("%B %Y")
-    output = render(tools_by_category=tools_by_category, updated=updated)
+    output = render(tools_by_category=tools_by_category, category_anchors=category_anchors, updated=updated)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(output)
