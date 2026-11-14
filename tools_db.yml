@@ -212,3 +212,16 @@
     the next scheduled run times and a reference for each field's allowed values
     and special characters. Includes a library of common cron examples to copy
     from.
+
+- name: cssdb
+  url: https://cssdb.org
+  source: https://github.com/csstools/cssdb
+  thumbnail: assets/thumbnails/cssdb.png
+  category: Developer Tools
+  description: >
+    A database of CSS features tracked by how far they are in the process of
+    becoming web standards, maintained by CSSTools. Each feature gets a stage, a
+    short description, example code, browser support from MDN's compatibility
+    data, and links to the docs and spec. Also lists the PostCSS plugins and
+    polyfills that let you use a feature today, and which of them ship with
+    postcss-preset-env.

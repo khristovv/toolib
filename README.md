@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **18 tools** · 🗓️ **Last updated:** November 2026
+📚 **19 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
-- [Developer Tools](#developer-tools) (6)
+- [Developer Tools](#developer-tools) (7)
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
@@ -141,6 +141,21 @@ A free, open-source tool for creating and sharing beautiful images of your sourc
 | **Source** | *(closed source)* |
 
 A quick and simple editor for cron schedule expressions, made by Cronitor. Type an expression and it is instantly translated into plain English, with the next scheduled run times and a reference for each field's allowed values and special characters. Includes a library of common cron examples to copy from.
+
+---
+
+#### cssdb
+
+<p align="center">
+    <img src="assets/thumbnails/cssdb.png" alt="cssdb" width="300">
+</p>
+
+| | |
+|---|---|
+| **URL** | [cssdb.org](https://cssdb.org) |
+| **Source** | [github.com/csstools/cssdb](https://github.com/csstools/cssdb) |
+
+A database of CSS features tracked by how far they are in the process of becoming web standards, maintained by CSSTools. Each feature gets a stage, a short description, example code, browser support from MDN's compatibility data, and links to the docs and spec. Also lists the PostCSS plugins and polyfills that let you use a feature today, and which of them ship with postcss-preset-env.
 
 ---
 
