@@ -3,62 +3,68 @@
   source: https://github.com/yousifamanuel/terraink
   thumbnail: assets/thumbnails/terraink.svg
   category: Design & Creative
-  description: >
-    A free, open-source cartographic poster engine that turns any location in the world
-    into a beautifully styled map poster — entirely in your browser. Powered by real
-    OpenStreetMap data, with rich theme customization, layer controls, custom typography,
-    and high-resolution PNG/PDF export.
+  description: 'A free, open-source cartographic poster engine that turns any location
+    in the world into a beautifully styled map poster — entirely in your browser.
+    Powered by real OpenStreetMap data, with rich theme customization, layer controls,
+    custom typography, and high-resolution PNG/PDF export.
 
+    '
+  og_image: https://terraink.app/assets/banner.jpg
 - name: Regex101
   url: https://regex101.com
   thumbnail: assets/thumbnails/regex101.png
   source: null
   category: Developer Tools
-  description: >
-    The gold standard online regex tester and debugger. Supports PCRE, Python, JavaScript,
-    Go, Java, C#/.NET, and Rust. Features live syntax highlighting, automatic step-by-step
-    explanation, a cheat sheet, community pattern library, debugger, unit test runner,
-    and a code generator.
+  description: 'The gold standard online regex tester and debugger. Supports PCRE,
+    Python, JavaScript, Go, Java, C#/.NET, and Rust. Features live syntax highlighting,
+    automatic step-by-step explanation, a cheat sheet, community pattern library,
+    debugger, unit test runner, and a code generator.
 
+    '
+  og_image: https://regex101.com/preview/
 - name: Monkeytype
   url: https://monkeytype.com
   source: https://github.com/monkeytypegame/monkeytype
   thumbnail: assets/thumbnails/monkeytype.png
   category: Productivity & Practice
-  description: >
-    A minimalistic, highly customizable typing speed test. Features multiple test modes
-    (timed, word count, quotes, custom), real-time WPM and accuracy tracking, themes,
-    smooth caret animations, and an account system to track your progress over time.
+  description: 'A minimalistic, highly customizable typing speed test. Features multiple
+    test modes (timed, word count, quotes, custom), real-time WPM and accuracy tracking,
+    themes, smooth caret animations, and an account system to track your progress
+    over time.
 
+    '
+  og_image: https://monkeytype.com/images/mtsocial.png
 - name: Dungeon Scrawl
   url: https://www.dungeonscrawl.com
   source: null
   thumbnail: assets/thumbnails/dungeonscrawl.png
   category: Games & Tabletop
-  description: >
-    A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and
-    Pathfinder. Build rooms, halls, and scenes in minutes — no downloads or sign-up
-    required. Supports multiple map styles, custom assets, PNG/SVG/PDF export, and
-    direct Roll20 integration.
+  description: 'A free, browser-based dungeon and battlemap maker for tabletop RPGs
+    like D&D and Pathfinder. Build rooms, halls, and scenes in minutes — no downloads
+    or sign-up required. Supports multiple map styles, custom assets, PNG/SVG/PDF
+    export, and direct Roll20 integration.
 
-
+    '
+  og_image: https://www.dungeonscrawl.com/_next/static/media/og.fcf1d031.png
 - name: MuseScore
   url: https://musescore.org/en
   source: https://github.com/musescore/MuseScore
   thumbnail: assets/thumbnails/musescore.svg
   category: Music & Audio
-  description: >
-    A free, open-source WYSIWYG music notation editor for composing, arranging,
+  description: 'A free, open-source WYSIWYG music notation editor for composing, arranging,
     and printing sheet music. Supports a wide range of formats including MusicXML,
     MIDI, and PDF export, with integrated audio playback for real-time score preview.
 
+    '
+  og_image: null
 - name: Auto Catalog Archive
   url: https://autocatalogarchive.com
   source: null
   thumbnail: assets/thumbnails/autocatalogarchive.png
   category: Reference & Research
-  description: >
-    A massive digital archive of vintage automobile brochures and catalogs from
-    manufacturers around the world. Explore high-quality scans of classic car
+  description: 'A massive digital archive of vintage automobile brochures and catalogs
+    from manufacturers around the world. Explore high-quality scans of classic car
     marketing materials spanning decades, perfect for research, design inspiration,
     or nostalgic deep dives into automotive history.
+
+    '
