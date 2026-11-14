@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-🗓️ **Last updated:** November 2026
+📚 **12 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -20,12 +20,12 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 
 ## Contents
 
-- [Design & Creative](#design--creative)
-- [Developer Tools](#developer-tools)
-- [Games & Tabletop](#games--tabletop)
-- [Music & Audio](#music--audio)
-- [Productivity & Practice](#productivity--practice)
-- [Reference & Research](#reference--research)
+- [Design & Creative](#design--creative) (3)
+- [Developer Tools](#developer-tools) (2)
+- [Games & Tabletop](#games--tabletop) (1)
+- [Music & Audio](#music--audio) (1)
+- [Productivity & Practice](#productivity--practice) (2)
+- [Reference & Research](#reference--research) (3)
 
 ---
 

@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-🗓️ **Last updated:** {{ updated }}
+📚 **{{ tools_by_category.values() | map('length') | sum }} tools** · 🗓️ **Last updated:** {{ updated }}
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 {% for category, tools in tools_by_category.items() %}
-- [{{ category }}](#{{ category | lower | replace(' ', '-') | replace('&', '') }})
+- [{{ category }}](#{{ category | lower | replace(' ', '-') | replace('&', '') }}) ({{ tools | length }})
 {% endfor %}
 
 ---
