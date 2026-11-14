@@ -74,3 +74,16 @@
     tools to design and email marketing, each paired with its list price and
     open-source replacements with live GitHub stats. New projects can be
     suggested or submitted via GitHub.
+
+- name: Bruno
+  url: https://www.usebruno.com
+  source: https://github.com/usebruno/bruno
+  thumbnail: assets/thumbnails/bruno.png
+  category: Developer Tools
+  description: >
+    An open-source, offline-first API client and Git-friendly alternative to
+    Postman. Supports REST, GraphQL, gRPC, and WebSocket requests, and stores
+    collections as plain-text files on your filesystem so they can be versioned
+    and reviewed alongside your code. Includes environments, pre/post-request
+    scripting, assertions and tests, and a CLI for running collections in CI. No
+    cloud sync or account required.

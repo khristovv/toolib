@@ -65,6 +65,21 @@ The gold standard online regex tester and debugger. Supports PCRE, Python, JavaS
 
 ---
 
+#### Bruno
+
+<p align="center">
+    <img src="assets/thumbnails/bruno.png" alt="Bruno" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [www.usebruno.com](https://www.usebruno.com) |
+| **Source** | [github.com/usebruno/bruno](https://github.com/usebruno/bruno) |
+
+An open-source, offline-first API client and Git-friendly alternative to Postman. Supports REST, GraphQL, gRPC, and WebSocket requests, and stores collections as plain-text files on your filesystem so they can be versioned and reviewed alongside your code. Includes environments, pre/post-request scripting, assertions and tests, and a CLI for running collections in CI. No cloud sync or account required.
+
+---
+
 ### Productivity & Practice
 
 ---
