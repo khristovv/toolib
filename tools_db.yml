@@ -179,7 +179,7 @@
 - name: Dimensions
   url: https://www.dimensions.com
   source: null
-  thumbnail: assets/thumbnails/dimensions.jpg
+  thumbnail: assets/thumbnails/dimensions.png
   category: Reference & Research
   description: >
     Dimensions.com is an ongoing reference database of dimensioned drawings

@@ -313,7 +313,7 @@ A massive digital archive of vintage automobile brochures and catalogs from manu
 #### Dimensions
 
 <p align="center">
-    <img src="assets/thumbnails/dimensions.jpg" alt="Dimensions" width="571">
+    <img src="assets/thumbnails/dimensions.png" alt="Dimensions" width="571">
 </p>
 
 | | |

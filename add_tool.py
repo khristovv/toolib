@@ -11,6 +11,9 @@ Usage:
 Thumbnail lookup order: --image, og:image, twitter:image, then a Playwright
 screenshot (only with --screenshot; needs `pip install playwright` and
 `playwright install chromium`).
+
+Raster thumbnails with solid corners get rounded corners cut into them (JPEGs
+become PNGs, since they can't be transparent).
 """
 
 import argparse
@@ -25,11 +28,15 @@ from urllib.parse import urljoin, urlparse
 import requests
 import yaml
 from bs4 import BeautifulSoup
+from PIL import Image, ImageChops, ImageDraw
 
-from generate_readme import TOOLS_FILE, generate, load_tools
+from generate_readme import TOOLS_FILE, generate, load_tools, thumbnail_width
 
 ROOT = Path(__file__).parent
 THUMBNAILS_DIR = ROOT / "assets" / "thumbnails"
+# Corner radius as it appears in the README, so every thumbnail looks the same
+# regardless of its real size.
+CORNER_RADIUS = 20
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
 IMAGE_EXTENSIONS = {
     "image/png": ".png",
@@ -152,6 +159,43 @@ def fetch_thumbnail(*, url: str, slug: str, image: str | None, screenshot: bool)
     raise RuntimeError("No usable thumbnail found. Pass --image <url-or-path> or --screenshot.")
 
 
+def round_corners(*, path: Path) -> Path:
+    """Cut rounded corners into a raster thumbnail and return its (possibly new) path.
+
+    SVGs and GIFs are left alone, as are images whose corners are already
+    transparent (icons and logos that have their own shape).
+    """
+    if path.suffix.lower() in (".svg", ".gif"):
+        return path
+
+    with Image.open(path) as image:
+        image = image.convert("RGBA")
+    width, height = image.size
+    corners = [(0, 0), (width - 1, 0), (0, height - 1), (width - 1, height - 1)]
+    if any(image.getpixel(corner)[3] < 255 for corner in corners):
+        return path
+
+    # Draw the mask at 4x and scale it down for smooth, anti-aliased edges.
+    radius = CORNER_RADIUS * width / thumbnail_width(path=path)
+    scale = 4
+    mask = Image.new("L", (width * scale, height * scale), 0)
+    ImageDraw.Draw(mask).rounded_rectangle(
+        (0, 0, width * scale - 1, height * scale - 1), radius=round(radius * scale), fill=255
+    )
+    mask = mask.resize((width, height), Image.LANCZOS)
+    image.putalpha(ImageChops.multiply(image.getchannel("A"), mask))
+
+    if path.suffix.lower() == ".webp":
+        image.save(path, lossless=True)
+        return path
+
+    dest = path.with_suffix(".png")
+    image.save(dest, optimize=True)
+    if dest != path:
+        path.unlink()
+    return dest
+
+
 def yaml_scalar(value: str | None) -> str:
     """Render a single value as YAML, quoting only when needed."""
     if value is None:
@@ -233,7 +277,7 @@ def cmd_add(args: argparse.Namespace) -> None:
             thumbnail = fetch_thumbnail(url=args.url, slug=slug, image=args.image, screenshot=args.screenshot)
         except RuntimeError as e:
             sys.exit(f"❌ {e}")
-        thumbnail = thumbnail.relative_to(ROOT).as_posix()
+        thumbnail = round_corners(path=thumbnail).relative_to(ROOT).as_posix()
         print(f"  🖼️  Saved {thumbnail}")
 
     entry = format_entry(
