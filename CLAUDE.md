@@ -10,26 +10,28 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Workflow
 
+All commands run from the repository root. The `toolib` package needs no install step, only its dependencies.
+
 ### Adding a tool
 
-Use the `/add-tool <url>` skill (`.claude/skills/add-tool/SKILL.md`). It inspects the page, picks the name, category, source, and description, then calls `scripts/add_tool.py`.
+Use the `/add-tool <url>` skill (`.claude/skills/add-tool/SKILL.md`). It inspects the page, picks the name, category, source, and description, then calls `python -m toolib add`.
 
-`scripts/add_tool.py` can also be used directly:
+The CLI can also be used directly:
 
 ```bash
-python scripts/add_tool.py inspect <url>   # page metadata, image candidates, duplicate check, categories
-python scripts/add_tool.py add <url> --name "..." --category "..." --description "..." [--source URL]
-                           [--image URL_OR_PATH] [--screenshot] [--new-category] [--dry-run]
+python -m toolib inspect <url>   # page metadata, image candidates, duplicate check, categories
+python -m toolib add <url> --name "..." --category "..." --description "..." [--source URL]
+                     [--image URL_OR_PATH] [--screenshot] [--new-category] [--dry-run]
 ```
 
-`add` downloads the thumbnail (`--image`, then og:image, then twitter:image, then a Playwright screenshot with `--screenshot`), appends the entry to `tools_db.yml` as text (existing entries are never reformatted), and regenerates `README.md`.
+`add` downloads the thumbnail (`--image`, then og:image, then twitter:image, then a Playwright screenshot with `--screenshot`), rounds its corners, appends the entry to `tools_db.yml` as text (existing entries are never reformatted), and regenerates `README.md`.
 
 ### Updating a tool
 
 Edit `tools_db.yml`, then regenerate `README.md`:
 
 ```bash
-python scripts/generate_readme.py
+python -m toolib generate
 ```
 
 ### Setup
@@ -45,10 +47,14 @@ pip install playwright && playwright install chromium
 | File | Role |
 |---|---|
 | `tools_db.yml` | Source of truth — one YAML list entry per tool |
-| `scripts/README.md.jinja` | Jinja2 template that defines the README layout |
-| `scripts/generate_readme.py` | Reads the YAML (never writes it), groups tools by category, and renders the template |
-| `scripts/add_tool.py` | Adds a tool from a URL: thumbnail download, YAML append, README regeneration |
-| `.claude/skills/add-tool/` | Claude skill that fills in the fields and drives `add_tool.py` |
+| `toolib/cli.py` | Command line (`generate`, `inspect`, `add`); `python -m toolib` runs it via `__main__.py` |
+| `toolib/config.py` | Paths (repo root, `tools_db.yml`, thumbnails, template) and HTTP headers |
+| `toolib/database.py` | `ToolDatabase` (loads, groups, sorts, and appends to the YAML) and `ToolEntry` (formats an entry) |
+| `toolib/page.py` | `PageInspector` — title, description, image candidates, and GitHub links from a tool's page |
+| `toolib/thumbnail.py` | `Thumbnail` (size, README display width, rounded corners) and `ThumbnailFetcher` (download, copy, or screenshot) |
+| `toolib/readme.py` | `ReadmeGenerator` (renders the template) and `AnchorRegistry` (GitHub-style heading anchors) |
+| `toolib/templates/README.md.jinja` | Jinja2 template that defines the README layout |
+| `.claude/skills/add-tool/` | Claude skill that fills in the fields and drives `python -m toolib add` |
 | `assets/thumbnails/` | Tool thumbnail images, stored locally (never hotlinked), named `<slug>.<ext>` |
 | `README.md` | Generated output — do not edit manually |
 
@@ -66,6 +72,6 @@ pip install playwright && playwright install chromium
 
 Entries are separated by a blank line. Descriptions use the `>` folded style.
 
-Categories currently in use: `Design & Creative`, `Developer Tools`, `Productivity & Practice`, `Games & Tabletop`, `Music & Audio`, `Reference & Research`.
+Categories currently in use: `Design & Creative`, `Developer Tools`, `Games & Tabletop`, `Music & Audio`, `Productivity & Practice`, `Reference & Research`.
 
-The Jinja2 template derives Contents anchor links by lowercasing the category name and replacing spaces with `-` and stripping `&`, so new category names must produce valid Markdown anchors.
+The README sorts categories and tools alphabetically. Contents links use the same anchors GitHub generates for headings (`AnchorRegistry`), so any category or tool name works.
