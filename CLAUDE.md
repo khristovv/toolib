@@ -53,6 +53,7 @@ pip install -r requirements.txt
 | `toolib/readme.py` | `ReadmeGenerator` (builds the category and tool sections and renders the template) and `AnchorRegistry` (GitHub-style heading anchors) |
 | `toolib/templates/README.md.jinja` | Jinja2 template that defines the README layout |
 | `.claude/skills/add-tool/` | Claude skill that fills in the fields and drives `python -m toolib add` |
+| `docs/inspect-and-add.md` | How `inspect` and `add` work: page parsing, GitHub links, duplicate check, thumbnail fetching and processing |
 | `assets/thumbnails/` | Tool thumbnail images, stored locally (never hotlinked), named `<slug>.<ext>` |
 | `README.md` | Generated output — do not edit manually |
 
