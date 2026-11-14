@@ -138,3 +138,15 @@
     prototypes, plus a Dev Mode that generates CSS, HTML, React, SwiftUI, and
     Compose code. Runs natively offline on macOS, Windows, and Linux or in the
     browser, with real-time collaboration and no account required.
+
+- name: tweakcn
+  url: https://tweakcn.com
+  source: https://github.com/jnsahaj/tweakcn
+  thumbnail: assets/thumbnails/tweakcn.png
+  category: Developer Tools
+  description: >
+    A free, open-source visual theme editor for shadcn/ui and Tailwind CSS.
+    Start from a gallery of theme presets or build your own by tweaking colors,
+    typography, and other style properties, with a live preview of real
+    components as you go. Copy the generated theme code straight into your
+    project, so your shadcn/ui app doesn't look like every other one.

@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **12 tools** · 🗓️ **Last updated:** November 2026
+📚 **13 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
-- [Developer Tools](#developer-tools) (2)
+- [Developer Tools](#developer-tools) (3)
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
@@ -111,6 +111,21 @@ An open-source, offline-first API client and Git-friendly alternative to Postman
 | **Source** | *(closed source)* |
 
 The gold standard online regex tester and debugger. Supports PCRE, Python, JavaScript, Go, Java, C#/.NET, and Rust. Features live syntax highlighting, automatic step-by-step explanation, a cheat sheet, community pattern library, debugger, unit test runner, and a code generator.
+
+---
+
+#### tweakcn
+
+<p align="center">
+    <img src="assets/thumbnails/tweakcn.png" alt="tweakcn" width="571">
+</p>
+
+| | |
+|---|---|
+| **URL** | [tweakcn.com](https://tweakcn.com) |
+| **Source** | [github.com/jnsahaj/tweakcn](https://github.com/jnsahaj/tweakcn) |
+
+A free, open-source visual theme editor for shadcn/ui and Tailwind CSS. Start from a gallery of theme presets or build your own by tweaking colors, typography, and other style properties, with a live preview of real components as you go. Copy the generated theme code straight into your project, so your shadcn/ui app doesn't look like every other one.
 
 ---
 
