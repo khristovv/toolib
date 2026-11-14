@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **17 tools** · 🗓️ **Last updated:** November 2026
+📚 **18 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
-- [Developer Tools](#developer-tools) (5)
+- [Developer Tools](#developer-tools) (6)
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
@@ -126,6 +126,21 @@ A free, open-source tool for finding the cost of adding an npm package to your f
 | **Source** | [github.com/carbon-app/carbon](https://github.com/carbon-app/carbon) |
 
 A free, open-source tool for creating and sharing beautiful images of your source code. Paste a snippet or import a GitHub gist, then customize the syntax theme, font, background, padding, and window style. Export as PNG or SVG, copy straight to the clipboard, or share a link or embed. Community plugins bring it into editors like IntelliJ IDEA and Xcode.
+
+---
+
+#### Crontab Guru
+
+<p align="center">
+    <img src="assets/thumbnails/crontabguru.png" alt="Crontab Guru" width="571">
+</p>
+
+| | |
+|---|---|
+| **URL** | [crontab.guru](https://crontab.guru) |
+| **Source** | *(closed source)* |
+
+A quick and simple editor for cron schedule expressions, made by Cronitor. Type an expression and it is instantly translated into plain English, with the next scheduled run times and a reference for each field's allowed values and special characters. Includes a library of common cron examples to copy from.
 
 ---
 
