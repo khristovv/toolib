@@ -25,7 +25,7 @@ import sys
 import requests
 
 from .config import ROOT
-from .database import ToolDatabase, ToolEntry
+from .database import Tool, ToolDatabase
 from .page import PageInspector
 from .readme import ReadmeGenerator
 from .thumbnail import ThumbnailFetcher
@@ -40,7 +40,7 @@ def cmd_inspect(args: argparse.Namespace) -> None:
     duplicate = database.find_duplicate(args.url)
     info = {
         "url": args.url,
-        "duplicate_of": duplicate["name"] if duplicate else None,
+        "duplicate_of": duplicate.name if duplicate else None,
         "existing_categories": sorted(database.categories),
     }
 
@@ -57,7 +57,7 @@ def cmd_add(args: argparse.Namespace) -> None:
 
     duplicate = database.find_duplicate(args.url)
     if duplicate:
-        sys.exit(f"❌ {args.url} is already in the library as '{duplicate['name']}'.")
+        sys.exit(f"❌ {args.url} is already in the library as '{duplicate.name}'.")
 
     if args.category not in database.categories and not args.new_category:
         sys.exit(
@@ -66,10 +66,17 @@ def cmd_add(args: argparse.Namespace) -> None:
         )
 
     fetcher = ThumbnailFetcher(name=args.name, url=args.url)
+    tool = Tool(
+        name=args.name,
+        url=args.url,
+        source=args.source,
+        thumbnail=f"assets/thumbnails/{fetcher.slug}.<ext>",  # Replaced once the image is saved.
+        category=args.category,
+        description=args.description,
+    )
 
     if args.dry_run:
-        entry = _entry(args, thumbnail=f"assets/thumbnails/{fetcher.slug}.<ext>")
-        print(entry.to_yaml())
+        print(tool.to_yaml())
         return
 
     existing = fetcher.existing()
@@ -81,30 +88,19 @@ def cmd_add(args: argparse.Namespace) -> None:
     except RuntimeError as e:
         sys.exit(f"❌ {e}")
 
-    # Until the entry is in tools_db.yml, a failure would leave an orphaned thumbnail
+    # Until the tool is in tools_db.yml, a failure would leave an orphaned thumbnail
     # behind that blocks the next attempt, so remove it.
     try:
         thumbnail = thumbnail.round_corners()
-        entry = _entry(args, thumbnail=thumbnail.path.relative_to(ROOT).as_posix())
-        print(f"  🖼️  Saved {entry.thumbnail}")
-        database.append(entry.to_yaml())
+        tool.thumbnail = thumbnail.path.relative_to(ROOT).as_posix()
+        print(f"  🖼️  Saved {tool.thumbnail}")
+        database.add(tool)
     except BaseException:
         thumbnail.path.unlink(missing_ok=True)
         raise
 
-    print(f"  📝 Added '{args.name}' to {database.path.name}")
+    print(f"  📝 Added '{tool.name}' to {database.path.name}")
     ReadmeGenerator(database=database).generate()
-
-
-def _entry(args: argparse.Namespace, *, thumbnail: str) -> ToolEntry:
-    return ToolEntry(
-        name=args.name,
-        url=args.url,
-        source=args.source,
-        thumbnail=thumbnail,
-        category=args.category,
-        description=args.description,
-    )
 
 
 def main() -> None:

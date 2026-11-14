@@ -1,12 +1,13 @@
 """Rendering README.md from the tool database and the Jinja2 template."""
 
 import re
+from dataclasses import dataclass
 from datetime import datetime, timezone
 
 from jinja2 import Environment, FileSystemLoader
 
 from .config import OUTPUT_FILE, ROOT, TEMPLATE_FILE, TEMPLATES_DIR
-from .database import ToolDatabase
+from .database import Tool, ToolDatabase
 from .thumbnail import Thumbnail
 
 
@@ -30,6 +31,22 @@ class AnchorRegistry:
         return anchor
 
 
+@dataclass
+class ToolSection:
+    """A tool as the README shows it: the tool plus its heading anchor and thumbnail width."""
+
+    tool: Tool
+    anchor: str
+    thumbnail_width: int
+
+
+@dataclass
+class CategorySection:
+    name: str
+    anchor: str
+    tools: list[ToolSection]
+
+
 class ReadmeGenerator:
     """Renders README.md from the tool database and the Jinja2 template."""
 
@@ -39,18 +56,27 @@ class ReadmeGenerator:
     def __init__(self, *, database: ToolDatabase):
         self.database = database
 
-    def render(self) -> str:
-        tools_by_category = self.database.grouped_by_category()
+    def sections(self) -> list[CategorySection]:
+        """The README's category sections, in order. Anchors are handed out in the
+        same order as the headings appear, so repeats match GitHub's numbering."""
         anchors = AnchorRegistry(reserved=self.RESERVED_ANCHORS)
-        category_anchors = {}
+        sections = []
 
-        for category, tools in tools_by_category.items():
-            category_anchors[category] = anchors.anchor(category)
+        for category, tools in self.database.grouped_by_category().items():
+            category_anchor = anchors.anchor(category)
+            tool_sections = [
+                ToolSection(
+                    tool=tool,
+                    anchor=anchors.anchor(tool.name),
+                    thumbnail_width=Thumbnail(ROOT / tool.thumbnail).display_width,
+                )
+                for tool in tools
+            ]
+            sections.append(CategorySection(name=category, anchor=category_anchor, tools=tool_sections))
 
-            for tool in tools:
-                tool["anchor"] = anchors.anchor(tool["name"])
-                tool["thumbnail_width"] = Thumbnail(ROOT / tool["thumbnail"]).display_width
+        return sections
 
+    def render(self) -> str:
         env = Environment(
             loader=FileSystemLoader(str(TEMPLATES_DIR)),
             trim_blocks=True,
@@ -59,8 +85,8 @@ class ReadmeGenerator:
         )
 
         return env.get_template(TEMPLATE_FILE).render(
-            tools_by_category=tools_by_category,
-            category_anchors=category_anchors,
+            sections=self.sections(),
+            tool_count=len(self.database.tools),
             updated=datetime.now(timezone.utc).strftime("%B %Y"),
         )
 

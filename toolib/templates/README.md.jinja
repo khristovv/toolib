@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **{{ tools_by_category.values() | map('length') | sum }} tools** · 🗓️ **Last updated:** {{ updated }}
+📚 **{{ tool_count }} tools** · 🗓️ **Last updated:** {{ updated }}
 
 ---
 
@@ -20,27 +20,28 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 
 ## Contents
 
-{% for category, tools in tools_by_category.items() %}
-- [{{ category }}](#{{ category_anchors[category] }}) ({{ tools | length }})
-{% for tool in tools %}
-  - [{{ tool.name }}](#{{ tool.anchor }})
+{% for category in sections %}
+- [{{ category.name }}](#{{ category.anchor }}) ({{ category.tools | length }})
+{% for section in category.tools %}
+  - [{{ section.tool.name }}](#{{ section.anchor }})
 {% endfor %}
 {% endfor %}
 
 ---
 
 ## Library
-{% for category, tools in tools_by_category.items() %}
+{% for category in sections %}
 
-### {{ category }}
-{% for tool in tools %}
+### {{ category.name }}
+{% for section in category.tools %}
+{% set tool = section.tool %}
 
 ---
 
 #### {{ tool.name }}
 
 <p align="center">
-    <img src="{{ tool.thumbnail }}" alt="{{ tool.name | e }}" width="{{ tool.thumbnail_width }}">
+    <img src="{{ tool.thumbnail }}" alt="{{ tool.name | e }}" width="{{ section.thumbnail_width }}">
 </p>
 
 | | |

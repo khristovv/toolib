@@ -47,10 +47,10 @@ pip install -r requirements.txt
 | `tools_db.yml` | Source of truth — one YAML list entry per tool |
 | `toolib/cli.py` | Command line (`generate`, `inspect`, `add`); `python -m toolib` runs it via `__main__.py` |
 | `toolib/config.py` | Paths (repo root, `tools_db.yml`, thumbnails, template) and HTTP headers |
-| `toolib/database.py` | `ToolDatabase` (loads, groups, sorts, and appends to the YAML) and `ToolEntry` (formats an entry) |
+| `toolib/database.py` | `Tool` (one tool, and its YAML entry format) and `ToolDatabase` (loads, groups, sorts, and adds tools) |
 | `toolib/page.py` | `PageInspector` — title, description, image candidates, and GitHub links from a tool's page |
 | `toolib/thumbnail.py` | `Thumbnail` (size, README display width, rounded corners) and `ThumbnailFetcher` (download or copy, and check it's an image) |
-| `toolib/readme.py` | `ReadmeGenerator` (renders the template) and `AnchorRegistry` (GitHub-style heading anchors) |
+| `toolib/readme.py` | `ReadmeGenerator` (builds the category and tool sections and renders the template) and `AnchorRegistry` (GitHub-style heading anchors) |
 | `toolib/templates/README.md.jinja` | Jinja2 template that defines the README layout |
 | `.claude/skills/add-tool/` | Claude skill that fills in the fields and drives `python -m toolib add` |
 | `assets/thumbnails/` | Tool thumbnail images, stored locally (never hotlinked), named `<slug>.<ext>` |
