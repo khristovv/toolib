@@ -3,10 +3,10 @@ add_tool.py
 Adds a tool to tools_db.yml, downloads its thumbnail, and regenerates README.md.
 
 Usage:
-    python add_tool.py inspect <url>
-    python add_tool.py add <url> --name NAME --category CATEGORY --description TEXT
-                       [--source URL] [--image URL_OR_PATH] [--screenshot]
-                       [--new-category] [--dry-run]
+    python scripts/add_tool.py inspect <url>
+    python scripts/add_tool.py add <url> --name NAME --category CATEGORY --description TEXT
+                               [--source URL] [--image URL_OR_PATH] [--screenshot]
+                               [--new-category] [--dry-run]
 
 Thumbnail lookup order: --image, og:image, twitter:image, then a Playwright
 screenshot (only with --screenshot; needs `pip install playwright` and
@@ -30,9 +30,8 @@ import yaml
 from bs4 import BeautifulSoup
 from PIL import Image, ImageChops, ImageDraw
 
-from generate_readme import TOOLS_FILE, generate, load_tools, thumbnail_width
+from generate_readme import ROOT, TOOLS_FILE, generate, load_tools, thumbnail_width
 
-ROOT = Path(__file__).parent
 THUMBNAILS_DIR = ROOT / "assets" / "thumbnails"
 # Corner radius as it appears in the README, so every thumbnail looks the same
 # regardless of its real size.

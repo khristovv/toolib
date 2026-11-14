@@ -3,7 +3,7 @@ generate_readme.py
 Reads tools_db.yml and renders README.md from README.md.jinja.
 
 Usage:
-    python generate_readme.py
+    python scripts/generate_readme.py
 """
 
 import re
@@ -15,7 +15,8 @@ from datetime import datetime, timezone
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).parent
+SCRIPTS_DIR = Path(__file__).resolve().parent
+ROOT = SCRIPTS_DIR.parent
 TOOLS_FILE = ROOT / "tools_db.yml"
 TEMPLATE_FILE = "README.md.jinja"
 OUTPUT_FILE = ROOT / "README.md"
@@ -107,7 +108,7 @@ def add_anchors(*, tools_by_category: dict[str, list[dict]]) -> dict[str, str]:
 
 def render(*, tools_by_category: dict, category_anchors: dict, updated: str) -> str:
     env = Environment(
-        loader=FileSystemLoader(str(ROOT)),
+        loader=FileSystemLoader(str(SCRIPTS_DIR)),
         trim_blocks=True,
         lstrip_blocks=True,
         keep_trailing_newline=True,

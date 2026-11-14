@@ -2,7 +2,7 @@
 name: add-tool
 description: Add a website or tool to the Toolib library from its URL. Use when the user pastes a link and wants it added to tools_db.yml / the README, or runs /add-tool <url>.
 argument-hint: <url> [<url> ...]
-allowed-tools: Bash(python add_tool.py:*), Bash(python generate_readme.py:*), Read, WebFetch, WebSearch
+allowed-tools: Bash(python scripts/add_tool.py:*), Bash(python scripts/generate_readme.py:*), Read, WebFetch, WebSearch
 ---
 
 # Add a tool to Toolib
@@ -12,7 +12,7 @@ Add each URL in `$ARGUMENTS` to the library. `add_tool.py` does the mechanical w
 ## 1. Inspect
 
 ```bash
-python add_tool.py inspect <url>
+python scripts/add_tool.py inspect <url>
 ```
 
 If `duplicate_of` is set, tell the user it's already in the library and skip it. If `fetch_error` is set or the metadata is thin, use WebFetch on the URL to understand what the tool does.
@@ -27,14 +27,14 @@ If `duplicate_of` is set, tell the user it's already in the library and skip it.
 ## 3. Add
 
 ```bash
-python add_tool.py add <url> --name "..." --category "..." --description "..." [--source "..."]
+python scripts/add_tool.py add <url> --name "..." --category "..." --description "..." [--source "..."]
 ```
 
 If it reports no usable thumbnail, retry with `--image <url>` pointing at a good image you found on the page (a hero image or large logo), or `--screenshot` if Playwright is installed. If neither works, ask the user for an image.
 
 ## 4. Check the thumbnail
 
-Read the saved image. It should clearly represent the tool at 600px wide. If it's blank, tiny, a generic placeholder, or unrelated, find a better image and overwrite the file at the same path (keep the same extension, or update `thumbnail` in `tools_db.yml` and rerun `python generate_readme.py`).
+Read the saved image. It should clearly represent the tool at 600px wide. If it's blank, tiny, a generic placeholder, or unrelated, find a better image and overwrite the file at the same path (keep the same extension, or update `thumbnail` in `tools_db.yml` and rerun `python scripts/generate_readme.py`).
 
 ## 5. Report
 
