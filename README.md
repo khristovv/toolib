@@ -141,4 +141,19 @@ A massive digital archive of vintage automobile brochures and catalogs from manu
 
 ---
 
+#### SaaS is Dead
+
+<p align="center">
+    <img src="assets/thumbnails/saasisdead.png" alt="SaaS is Dead" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [saasisdead.si](https://saasisdead.si) |
+| **Source** | [github.com/tonyzedginidze/saasisdead](https://github.com/tonyzedginidze/saasisdead) |
+
+A searchable directory of open-source alternatives to the paid software you subscribe to. Commercial products are organized by category, from developer tools to design and email marketing, each paired with its list price and open-source replacements with live GitHub stats. New projects can be suggested or submitted via GitHub.
+
+---
+
 *Last updated: November 2026*

@@ -62,3 +62,15 @@
     from manufacturers around the world. Explore high-quality scans of classic car
     marketing materials spanning decades, perfect for research, design inspiration,
     or nostalgic deep dives into automotive history.
+
+- name: SaaS is Dead
+  url: https://saasisdead.si
+  source: https://github.com/tonyzedginidze/saasisdead
+  thumbnail: assets/thumbnails/saasisdead.png
+  category: Reference & Research
+  description: >
+    A searchable directory of open-source alternatives to the paid software you
+    subscribe to. Commercial products are organized by category, from developer
+    tools to design and email marketing, each paired with its list price and
+    open-source replacements with live GitHub stats. New projects can be
+    suggested or submitted via GitHub.
