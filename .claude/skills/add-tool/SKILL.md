@@ -22,7 +22,7 @@ If `duplicate_of` is set, tell the user it's already in the library and skip it.
 - **name** — the product's own name (`site_name` or a cleaned-up `title`), without taglines like "– Free Online Editor".
 - **source** — the official source repo. Use `github_links` if one is clearly the project's own repo; otherwise do one quick search for "<name> github". Only use a repo you're confident is official. If none, omit `--source` (closed source).
 - **category** — pick from `existing_categories`. Only if none fits, propose a new one and ask the user before using `--new-category`. New names must be Title Case words joined by spaces or ` & `, so the README anchor works.
-- **description** — 2–4 sentences, roughly 40–70 words, matching the existing entries in `tools_db.yml`: open with what it is ("A free, browser-based …", "The gold standard …"), then the notable features. Concrete and factual, no marketing fluff, no first person.
+- **description** — 2–4 sentences, roughly 40–70 words, matching the existing entries in `tools_db.yml`: open with what it is ("A free, browser-based …", "The gold standard …"), then the notable features. Concrete and factual, no marketing fluff, no first person. Leave out anything that goes stale: counts (users, items, stars), prices, version numbers, "new"/"recently launched".
 
 ## 3. Add
 
