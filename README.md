@@ -53,7 +53,7 @@ A free, open-source virtual whiteboard for sketching diagrams, wireframes, and f
 #### FigCraft
 
 <p align="center">
-    <img src="assets/thumbnails/figcraft.jpg" alt="FigCraft" width="600">
+    <img src="assets/thumbnails/figcraft.webp" alt="FigCraft" width="600">
 </p>
 
 | | |

@@ -129,7 +129,7 @@
 - name: FigCraft
   url: https://getartcraft.com/apps/figcraft
   source: https://github.com/storytold/figcraft
-  thumbnail: assets/thumbnails/figcraft.jpg
+  thumbnail: assets/thumbnails/figcraft.webp
   category: Design & Creative
   description: >
     A free, open-source interface design and prototyping app built in pure Rust,
