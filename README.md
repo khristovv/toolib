@@ -38,7 +38,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 #### Excalidraw
 
 <p align="center">
-    <img src="assets/thumbnails/excalidraw.png" alt="Excalidraw" width="600">
+    <img src="assets/thumbnails/excalidraw.png" alt="Excalidraw" width="533">
 </p>
 
 | | |
@@ -53,7 +53,7 @@ A free, open-source virtual whiteboard for sketching diagrams, wireframes, and f
 #### FigCraft
 
 <p align="center">
-    <img src="assets/thumbnails/figcraft.webp" alt="FigCraft" width="600">
+    <img src="assets/thumbnails/figcraft.webp" alt="FigCraft" width="256">
 </p>
 
 | | |
@@ -68,7 +68,7 @@ A free, open-source interface design and prototyping app built in pure Rust, par
 #### TerraInk
 
 <p align="center">
-    <img src="assets/thumbnails/terraink.svg" alt="TerraInk" width="600">
+    <img src="assets/thumbnails/terraink.svg" alt="TerraInk" width="300">
 </p>
 
 | | |
@@ -87,7 +87,7 @@ A free, open-source cartographic poster engine that turns any location in the wo
 #### Bruno
 
 <p align="center">
-    <img src="assets/thumbnails/bruno.png" alt="Bruno" width="600">
+    <img src="assets/thumbnails/bruno.png" alt="Bruno" width="571">
 </p>
 
 | | |
@@ -102,7 +102,7 @@ An open-source, offline-first API client and Git-friendly alternative to Postman
 #### Regex101
 
 <p align="center">
-    <img src="assets/thumbnails/regex101.png" alt="Regex101" width="600">
+    <img src="assets/thumbnails/regex101.png" alt="Regex101" width="571">
 </p>
 
 | | |
@@ -121,7 +121,7 @@ The gold standard online regex tester and debugger. Supports PCRE, Python, JavaS
 #### Dungeon Scrawl
 
 <p align="center">
-    <img src="assets/thumbnails/dungeonscrawl.png" alt="Dungeon Scrawl" width="600">
+    <img src="assets/thumbnails/dungeonscrawl.png" alt="Dungeon Scrawl" width="571">
 </p>
 
 | | |
@@ -140,7 +140,7 @@ A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and
 #### MuseScore
 
 <p align="center">
-    <img src="assets/thumbnails/musescore.svg" alt="MuseScore" width="600">
+    <img src="assets/thumbnails/musescore.svg" alt="MuseScore" width="300">
 </p>
 
 | | |
@@ -159,7 +159,7 @@ A free, open-source WYSIWYG music notation editor for composing, arranging, and 
 #### MonitorControl
 
 <p align="center">
-    <img src="assets/thumbnails/monitorcontrol.png" alt="MonitorControl" width="600">
+    <img src="assets/thumbnails/monitorcontrol.png" alt="MonitorControl" width="300">
 </p>
 
 | | |
@@ -174,7 +174,7 @@ A free, open-source macOS menu bar app that controls the brightness, contrast, a
 #### Monkeytype
 
 <p align="center">
-    <img src="assets/thumbnails/monkeytype.png" alt="Monkeytype" width="600">
+    <img src="assets/thumbnails/monkeytype.png" alt="Monkeytype" width="512">
 </p>
 
 | | |
@@ -193,7 +193,7 @@ A minimalistic, highly customizable typing speed test. Features multiple test mo
 #### Auto Catalog Archive
 
 <p align="center">
-    <img src="assets/thumbnails/autocatalogarchive.png" alt="Auto Catalog Archive" width="600">
+    <img src="assets/thumbnails/autocatalogarchive.png" alt="Auto Catalog Archive" width="426">
 </p>
 
 | | |
@@ -208,7 +208,7 @@ A massive digital archive of vintage automobile brochures and catalogs from manu
 #### Movie Scene Map
 
 <p align="center">
-    <img src="assets/thumbnails/moviescenemap.png" alt="Movie Scene Map" width="600">
+    <img src="assets/thumbnails/moviescenemap.png" alt="Movie Scene Map" width="571">
 </p>
 
 | | |
@@ -223,7 +223,7 @@ A free interactive world map of real filming locations for movies and TV series,
 #### SaaS is Dead
 
 <p align="center">
-    <img src="assets/thumbnails/saasisdead.png" alt="SaaS is Dead" width="600">
+    <img src="assets/thumbnails/saasisdead.png" alt="SaaS is Dead" width="571">
 </p>
 
 | | |
