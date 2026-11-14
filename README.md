@@ -102,7 +102,7 @@ An open-source, offline-first API client and Git-friendly alternative to Postman
 #### Bundlephobia
 
 <p align="center">
-    <img src="assets/thumbnails/bundlephobia.svg" alt="Bundlephobia" width="381">
+    <img src="assets/thumbnails/bundlephobia.svg" alt="Bundlephobia" width="363">
 </p>
 
 | | |
