@@ -203,6 +203,21 @@ A searchable directory of open-source alternatives to the paid software you subs
 
 ---
 
+#### Movie Scene Map
+
+<p align="center">
+    <img src="assets/thumbnails/moviescenemap.png" alt="Movie Scene Map" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [moviescenemap.com](https://moviescenemap.com) |
+| **Source** | *(closed source)* |
+
+A free interactive world map of real filming locations for movies and TV series, plus the real-world settings of video games, anime, and manga. Search a title to see where it was shot, or a place to see what was filmed there, with photos and Wikipedia links for each location. Sourced from Wikidata and film archives, with the full dataset downloadable as CC0 GeoJSON or CSV.
+
+---
+
 ## License
 
 Toolib is released under the [MIT License](LICENSE) — use it, fork it, and rework it however you like.

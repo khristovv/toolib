@@ -112,3 +112,16 @@
     browser with no sign-up, offers end-to-end encrypted live collaboration,
     reusable shape libraries, and export to PNG, SVG, or the clipboard. Also
     available as an embeddable React component.
+
+- name: Movie Scene Map
+  url: https://moviescenemap.com
+  source: null
+  thumbnail: assets/thumbnails/moviescenemap.png
+  category: Reference & Research
+  description: >
+    A free interactive world map of real filming locations for movies and TV
+    series, plus the real-world settings of video games, anime, and manga.
+    Search a title to see where it was shot, or a place to see what was filmed
+    there, with photos and Wikipedia links for each location. Sourced from
+    Wikidata and film archives, with the full dataset downloadable as CC0
+    GeoJSON or CSV.
