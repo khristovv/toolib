@@ -100,3 +100,15 @@
     shortcuts and shows the native macOS on-screen indicators. Combines DDC
     hardware control with software dimming, and can sync brightness across all
     your screens.
+
+- name: Excalidraw
+  url: https://excalidraw.com
+  source: https://github.com/excalidraw/excalidraw
+  thumbnail: assets/thumbnails/excalidraw.png
+  category: Design & Creative
+  description: >
+    A free, open-source virtual whiteboard for sketching diagrams, wireframes,
+    and flowcharts with a distinctive hand-drawn look. Runs entirely in the
+    browser with no sign-up, offers end-to-end encrypted live collaboration,
+    reusable shape libraries, and export to PNG, SVG, or the clipboard. Also
+    available as an embeddable React component.

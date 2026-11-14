@@ -48,6 +48,21 @@ A free, open-source cartographic poster engine that turns any location in the wo
 
 ---
 
+#### Excalidraw
+
+<p align="center">
+    <img src="assets/thumbnails/excalidraw.png" alt="Excalidraw" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [excalidraw.com](https://excalidraw.com) |
+| **Source** | [github.com/excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) |
+
+A free, open-source virtual whiteboard for sketching diagrams, wireframes, and flowcharts with a distinctive hand-drawn look. Runs entirely in the browser with no sign-up, offers end-to-end encrypted live collaboration, reusable shape libraries, and export to PNG, SVG, or the clipboard. Also available as an embeddable React component.
+
+---
+
 ### Developer Tools
 
 ---
