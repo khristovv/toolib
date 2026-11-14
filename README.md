@@ -8,7 +8,9 @@
 
 **Toolib** is a growing collection of websites, web apps, and online tools that I've found genuinely useful, impressive, or just plain fun. Each entry includes a short description, a link to the live tool, and source code where available.
 
-This repo is for personal reference and discovery — think of it as a living bookmarks bar, but organized and shareable.
+This repo is for personal reference and discovery — think of it as a living bookmarks bar, but organized and shareable. It's also a small way to give these tools the visibility they deserve: if you find something you like here, go support its creators.
+
+Toolib is a non-commercial project. It isn't monetized in any way, and it never will be.
 
 > ⚠️ This file is auto-generated from `tools_db.yml`. Don't edit it directly.
 
@@ -183,6 +185,14 @@ A massive digital archive of vintage automobile brochures and catalogs from manu
 | **Source** | [github.com/tonyzedginidze/saasisdead](https://github.com/tonyzedginidze/saasisdead) |
 
 A searchable directory of open-source alternatives to the paid software you subscribe to. Commercial products are organized by category, from developer tools to design and email marketing, each paired with its list price and open-source replacements with live GitHub stats. New projects can be suggested or submitted via GitHub.
+
+---
+
+## License
+
+Toolib is released under the [MIT License](LICENSE) — use it, fork it, and rework it however you like.
+
+The license covers this repository's code and text. The listed tools, their names, logos, and thumbnail images belong to their respective owners.
 
 ---
 
