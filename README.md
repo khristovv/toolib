@@ -65,6 +65,21 @@ A free, open-source virtual whiteboard for sketching diagrams, wireframes, and f
 
 ---
 
+#### FigCraft
+
+<p align="center">
+    <img src="assets/thumbnails/figcraft.jpg" alt="FigCraft" width="600">
+</p>
+
+| | |
+|---|---|
+| **URL** | [getartcraft.com/apps/figcraft](https://getartcraft.com/apps/figcraft) |
+| **Source** | [github.com/storytold/figcraft](https://github.com/storytold/figcraft) |
+
+A free, open-source interface design and prototyping app built in pure Rust, part of the ArtCraft suite. Offers frames with auto layout, components and variants, vector networks, variables with light/dark modes, and interactive prototypes, plus a Dev Mode that generates CSS, HTML, React, SwiftUI, and Compose code. Runs natively offline on macOS, Windows, and Linux or in the browser, with real-time collaboration and no account required.
+
+---
+
 ### Developer Tools
 
 ---
