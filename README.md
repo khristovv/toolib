@@ -2,6 +2,8 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
+🗓️ **Last updated:** November 2026
+
 ---
 
 ## Introduction
@@ -223,7 +225,3 @@ A free interactive world map of real filming locations for movies and TV series,
 Toolib is released under the [MIT License](LICENSE) — use it, fork it, and rework it however you like.
 
 The license covers this repository's code and text. The listed tools, their names, logos, and thumbnail images belong to their respective owners.
-
----
-
-*Last updated: November 2026*
