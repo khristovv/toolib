@@ -2,14 +2,26 @@
 
 import re
 import shutil
+import unicodedata
 from pathlib import Path
+from urllib.parse import urlparse
 from xml.etree import ElementTree
 
 import requests
 from PIL import Image, ImageChops, ImageDraw
 
-from .config import HEADERS, ROOT, THUMBNAILS_DIR
+from .config import HEADERS, THUMBNAILS_DIR
 from .page import PageInspector
+
+# Image types a thumbnail can be, by the Content-Type a server sends for them.
+IMAGE_TYPES = {
+    "image/png": ".png",
+    "image/jpeg": ".jpg",
+    "image/webp": ".webp",
+    "image/gif": ".gif",
+    "image/svg+xml": ".svg",
+}
+IMAGE_SUFFIXES = {*IMAGE_TYPES.values(), ".jpeg"}
 
 
 class Thumbnail:
@@ -27,13 +39,14 @@ class Thumbnail:
         self.path = path
 
     @property
-    def is_svg(self) -> bool:
-        return self.path.suffix.lower() == ".svg"
+    def suffix(self) -> str:
+        return self.path.suffix.lower()
 
     @property
     def size(self) -> tuple[float, float]:
+        """Raises OSError, ValueError, or ElementTree.ParseError if the file isn't a readable image."""
         # Pillow can't read SVGs, and they scale freely, so only their viewBox aspect ratio matters.
-        if self.is_svg:
+        if self.suffix == ".svg":
             view_box = ElementTree.parse(self.path).getroot().get("viewBox")
             if not view_box:
                 raise ValueError("SVG has no viewBox")
@@ -50,11 +63,11 @@ class Thumbnail:
         try:
             width, height = self.size
         except (OSError, ValueError, ElementTree.ParseError) as e:
-            print(f"  ⚠️  Couldn't read the size of {self.path.relative_to(ROOT)} ({e}), using full width")
+            print(f"  ⚠️  Couldn't read the size of {self.path.name} ({e}), using full width")
             return self.MAX_WIDTH
 
         scale = min(self.MAX_WIDTH / width, self.MAX_HEIGHT / height)
-        if not self.is_svg:
+        if self.suffix != ".svg":
             scale = min(scale, 1)
 
         return round(width * scale)
@@ -65,7 +78,7 @@ class Thumbnail:
         SVGs and GIFs are left alone, as are images whose corners are already
         transparent (icons and logos that have their own shape).
         """
-        if self.path.suffix.lower() in (".svg", ".gif"):
+        if self.suffix in (".svg", ".gif"):
             return self
 
         with Image.open(self.path) as image:
@@ -86,7 +99,7 @@ class Thumbnail:
         mask = mask.resize((width, height), Image.LANCZOS)
         image.putalpha(ImageChops.multiply(image.getchannel("A"), mask))
 
-        if self.path.suffix.lower() == ".webp":
+        if self.suffix == ".webp":
             image.save(self.path, lossless=True)
             return self
 
@@ -101,75 +114,66 @@ class Thumbnail:
 class ThumbnailFetcher:
     """Finds and saves a tool's thumbnail as assets/thumbnails/<slug>.<ext>."""
 
-    IMAGE_EXTENSIONS = {
-        "image/png": ".png",
-        "image/jpeg": ".jpg",
-        "image/webp": ".webp",
-        "image/gif": ".gif",
-        "image/svg+xml": ".svg",
-    }
-
-    def __init__(self, *, name: str, directory: Path = THUMBNAILS_DIR):
-        self.slug = re.sub(r"[^a-z0-9]+", "", name.lower())
-        self.directory = directory
+    def __init__(self, *, name: str, url: str):
+        self.url = url
+        # Fall back to the domain for names with no Latin letters or digits at all.
+        self.slug = self._slugify(name) or self._slugify(urlparse(url).netloc.removeprefix("www."))
 
     def existing(self) -> Path | None:
-        return next(iter(self.directory.glob(f"{self.slug}.*")), None)
+        return next(iter(THUMBNAILS_DIR.glob(f"{self.slug}.*")), None)
 
-    def fetch(self, *, url: str, image: str | None, screenshot: bool) -> Thumbnail:
-        """Try --image, then the page's image meta tags, then (optionally) a screenshot."""
-        sources = [image] if image else []
-        if not image:
+    def fetch(self, *, image: str | None) -> Thumbnail:
+        """Save --image if given, otherwise the first usable image from the page's meta tags."""
+        if image:
+            sources = [image]
+        else:
             try:
-                sources += PageInspector(url).image_candidates
+                sources = PageInspector(self.url).image_candidates
             except requests.RequestException as e:
-                print(f"  ⚠️  Could not fetch {url}: {e}")
+                print(f"  ⚠️  Could not fetch {self.url}: {e}")
+                sources = []
 
         for source in sources:
             try:
                 print(f"  Downloading {source}...")
-                return Thumbnail(self.download(source))
+                return self.save(source)
             except (requests.RequestException, ValueError) as e:
                 print(f"  ⚠️  {e}")
 
-        if screenshot:
-            print(f"  Taking screenshot of {url}...")
-            return Thumbnail(self.screenshot(url))
+        raise RuntimeError("No usable thumbnail found. Pass --image <url-or-path>.")
 
-        raise RuntimeError("No usable thumbnail found. Pass --image <url-or-path> or --screenshot.")
-
-    def download(self, source: str) -> Path:
-        """Download (or copy, for a local path) an image."""
+    def save(self, source: str) -> Thumbnail:
+        """Download (or copy, for a local path) an image. Raises ValueError if it isn't one."""
         local = Path(source).expanduser()
         if local.is_file():
-            dest = self.directory / f"{self.slug}{local.suffix.lower()}"
+            suffix = local.suffix.lower()
+            if suffix not in IMAGE_SUFFIXES:
+                raise ValueError(f"{source} isn't a supported image ({', '.join(sorted(IMAGE_SUFFIXES))})")
+
+            dest = THUMBNAILS_DIR / f"{self.slug}{suffix}"
             shutil.copyfile(local, dest)
-            return dest
+        else:
+            resp = requests.get(source, timeout=15, headers=HEADERS)
+            resp.raise_for_status()
+            content_type = resp.headers.get("Content-Type", "").split(";")[0].strip().lower()
+            if content_type not in IMAGE_TYPES:
+                raise ValueError(f"{source} returned {content_type or 'no content type'}, not an image")
 
-        resp = requests.get(source, timeout=15, headers=HEADERS)
-        resp.raise_for_status()
-        content_type = resp.headers.get("Content-Type", "").split(";")[0].strip().lower()
-        extension = self.IMAGE_EXTENSIONS.get(content_type)
-        if not extension:
-            raise ValueError(f"{source} returned {content_type or 'no content type'}, not an image")
+            dest = THUMBNAILS_DIR / f"{self.slug}{IMAGE_TYPES[content_type]}"
+            dest.write_bytes(resp.content)
 
-        dest = self.directory / f"{self.slug}{extension}"
-        dest.write_bytes(resp.content)
-
-        return dest
-
-    def screenshot(self, url: str) -> Path:
+        # Make sure the file really is an image before anything else relies on it.
+        thumbnail = Thumbnail(dest)
         try:
-            from playwright.sync_api import sync_playwright
-        except ImportError:
-            raise RuntimeError("Playwright is not installed: pip install playwright && playwright install chromium")
+            thumbnail.size
+        except (OSError, ValueError, ElementTree.ParseError) as e:
+            dest.unlink()
+            raise ValueError(f"{source} isn't a readable image ({e})")
 
-        dest = self.directory / f"{self.slug}.png"
-        with sync_playwright() as p:
-            browser = p.chromium.launch()
-            page = browser.new_page(viewport={"width": 1200, "height": 630})
-            page.goto(url, wait_until="networkidle", timeout=30000)
-            page.screenshot(path=str(dest))
-            browser.close()
+        return thumbnail
 
-        return dest
+    @staticmethod
+    def _slugify(text: str) -> str:
+        """Lowercase ASCII letters and digits only, with accents stripped ("Café" -> "cafe")."""
+        ascii_text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
+        return re.sub(r"[^a-z0-9]+", "", ascii_text.lower())

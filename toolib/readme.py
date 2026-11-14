@@ -2,7 +2,6 @@
 
 import re
 from datetime import datetime, timezone
-from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -37,10 +36,8 @@ class ReadmeGenerator:
     # Headings that come before the library in the template.
     RESERVED_ANCHORS = {"toolib-", "introduction", "contents", "library"}
 
-    def __init__(self, *, database: ToolDatabase, template_dir: Path = TEMPLATES_DIR, output: Path = OUTPUT_FILE):
+    def __init__(self, *, database: ToolDatabase):
         self.database = database
-        self.template_dir = template_dir
-        self.output = output
 
     def render(self) -> str:
         tools_by_category = self.database.grouped_by_category()
@@ -55,7 +52,7 @@ class ReadmeGenerator:
                 tool["thumbnail_width"] = Thumbnail(ROOT / tool["thumbnail"]).display_width
 
         env = Environment(
-            loader=FileSystemLoader(str(self.template_dir)),
+            loader=FileSystemLoader(str(TEMPLATES_DIR)),
             trim_blocks=True,
             lstrip_blocks=True,
             keep_trailing_newline=True,
@@ -68,7 +65,7 @@ class ReadmeGenerator:
         )
 
     def generate(self) -> None:
-        with open(self.output, "w", encoding="utf-8") as f:
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write(self.render())
 
         print(

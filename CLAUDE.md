@@ -21,10 +21,10 @@ The CLI can also be used directly:
 ```bash
 python -m toolib inspect <url>   # page metadata, image candidates, duplicate check, categories
 python -m toolib add <url> --name "..." --category "..." --description "..." [--source URL]
-                     [--image URL_OR_PATH] [--screenshot] [--new-category] [--dry-run]
+                     [--image URL_OR_PATH] [--new-category] [--dry-run]
 ```
 
-`add` downloads the thumbnail (`--image`, then og:image, then twitter:image, then a Playwright screenshot with `--screenshot`), rounds its corners, appends the entry to `tools_db.yml` as text (existing entries are never reformatted), and regenerates `README.md`.
+`add` downloads the thumbnail (`--image` if given, otherwise the page's og:image or twitter:image), checks it's a readable image, rounds its corners, appends the entry to `tools_db.yml` as text (existing entries are never reformatted), and regenerates `README.md`.
 
 ### Updating a tool
 
@@ -38,8 +38,6 @@ python -m toolib generate
 
 ```bash
 pip install -r requirements.txt
-# optional, for --screenshot:
-pip install playwright && playwright install chromium
 ```
 
 ## Architecture
@@ -51,7 +49,7 @@ pip install playwright && playwright install chromium
 | `toolib/config.py` | Paths (repo root, `tools_db.yml`, thumbnails, template) and HTTP headers |
 | `toolib/database.py` | `ToolDatabase` (loads, groups, sorts, and appends to the YAML) and `ToolEntry` (formats an entry) |
 | `toolib/page.py` | `PageInspector` — title, description, image candidates, and GitHub links from a tool's page |
-| `toolib/thumbnail.py` | `Thumbnail` (size, README display width, rounded corners) and `ThumbnailFetcher` (download, copy, or screenshot) |
+| `toolib/thumbnail.py` | `Thumbnail` (size, README display width, rounded corners) and `ThumbnailFetcher` (download or copy, and check it's an image) |
 | `toolib/readme.py` | `ReadmeGenerator` (renders the template) and `AnchorRegistry` (GitHub-style heading anchors) |
 | `toolib/templates/README.md.jinja` | Jinja2 template that defines the README layout |
 | `.claude/skills/add-tool/` | Claude skill that fills in the fields and drives `python -m toolib add` |

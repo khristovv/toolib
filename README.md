@@ -131,7 +131,7 @@ An open-source, offline-first API client and Git-friendly alternative to Postman
 | **URL** | [bundlephobia.com](https://bundlephobia.com) |
 | **Source** | [github.com/pastelsky/bundlephobia](https://github.com/pastelsky/bundlephobia) |
 
-A free, open-source tool for finding the cost of adding an npm package to your frontend bundle. Look up any package to see its minified and gzipped size, estimated download time on slow networks, and which dependencies make up its weight. Compare sizes across versions, check exports for tree- shaking, scan a whole package.json, and discover lighter alternatives.
+A free, open-source tool for finding the cost of adding an npm package to your frontend bundle. Look up any package to see its minified and gzipped size, estimated download time on slow networks, and which dependencies make up its weight. Compare sizes across versions, check exports for tree-shaking, scan a whole package.json, and discover lighter alternatives.
 
 ---
 

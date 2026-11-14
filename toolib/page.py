@@ -1,7 +1,7 @@
 """Metadata scraped from a tool's web page."""
 
 import re
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -20,7 +20,9 @@ class PageInspector:
         self.url = url
         resp = requests.get(url, timeout=15, headers=HEADERS)
         resp.raise_for_status()
-        self.soup = BeautifulSoup(resp.text, "html.parser")
+        # Raw bytes, so BeautifulSoup uses the page's own <meta charset> instead of
+        # requests' guess, which is Latin-1 whenever the server sends no charset.
+        self.soup = BeautifulSoup(resp.content, "html.parser")
 
     def meta(self, *keys: str) -> str | None:
         """Content of the first of the given meta tags that's present."""
@@ -51,6 +53,10 @@ class PageInspector:
 
     @property
     def github_links(self) -> list[str]:
+        # On GitHub itself the page is the repo, and its links are mostly GitHub's own menus.
+        if urlparse(self.url).netloc.removeprefix("www.") == "github.com":
+            return []
+
         links = []
 
         for a in self.soup.find_all("a", href=True):

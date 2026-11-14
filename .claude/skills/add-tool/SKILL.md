@@ -30,7 +30,7 @@ If `duplicate_of` is set, tell the user it's already in the library and skip it.
 python -m toolib add <url> --name "..." --category "..." --description "..." [--source "..."]
 ```
 
-If it reports no usable thumbnail, retry with `--image <url>` pointing at a good image you found on the page (a hero image or large logo), or `--screenshot` if Playwright is installed. If neither works, ask the user for an image.
+If it reports no usable thumbnail, retry with `--image <url>` pointing at a good image you found on the page (a hero image or large logo). If there isn't one, ask the user for an image.
 
 ## 4. Check the thumbnail
 

@@ -5,8 +5,7 @@ Usage:
     python -m toolib generate
     python -m toolib inspect <url>
     python -m toolib add <url> --name NAME --category CATEGORY --description TEXT
-                         [--source URL] [--image URL_OR_PATH] [--screenshot]
-                         [--new-category] [--dry-run]
+                         [--source URL] [--image URL_OR_PATH] [--new-category] [--dry-run]
 
 generate  Renders README.md from tools_db.yml.
 inspect   Prints a page's metadata as JSON (title, description, image candidates,
@@ -14,10 +13,7 @@ inspect   Prints a page's metadata as JSON (title, description, image candidates
 add       Downloads the thumbnail, appends the entry to tools_db.yml, and
           regenerates README.md.
 
-Thumbnail lookup order: --image, og:image, twitter:image, then a Playwright
-screenshot (only with --screenshot; needs `pip install playwright` and
-`playwright install chromium`).
-
+The thumbnail is --image if given, otherwise the page's og:image or twitter:image.
 Raster thumbnails with solid corners get rounded corners cut into them (JPEGs
 become PNGs, since they can't be transparent).
 """
@@ -47,6 +43,7 @@ def cmd_inspect(args: argparse.Namespace) -> None:
         "duplicate_of": duplicate["name"] if duplicate else None,
         "existing_categories": sorted(database.categories),
     }
+
     try:
         info |= PageInspector(args.url).summary()
     except requests.RequestException as e:
@@ -68,22 +65,39 @@ def cmd_add(args: argparse.Namespace) -> None:
             "   Pass --new-category to create it."
         )
 
-    fetcher = ThumbnailFetcher(name=args.name)
-    existing = fetcher.existing()
-    if existing and not args.dry_run:
-        sys.exit(f"❌ Thumbnail {existing.relative_to(ROOT)} already exists.")
+    fetcher = ThumbnailFetcher(name=args.name, url=args.url)
 
     if args.dry_run:
-        thumbnail = f"assets/thumbnails/{fetcher.slug}.<ext>"
-    else:
-        try:
-            saved = fetcher.fetch(url=args.url, image=args.image, screenshot=args.screenshot)
-        except RuntimeError as e:
-            sys.exit(f"❌ {e}")
-        thumbnail = saved.round_corners().path.relative_to(ROOT).as_posix()
-        print(f"  🖼️  Saved {thumbnail}")
+        entry = _entry(args, thumbnail=f"assets/thumbnails/{fetcher.slug}.<ext>")
+        print(entry.to_yaml())
+        return
 
-    entry = ToolEntry(
+    existing = fetcher.existing()
+    if existing:
+        sys.exit(f"❌ Thumbnail {existing.relative_to(ROOT)} already exists.")
+
+    try:
+        thumbnail = fetcher.fetch(image=args.image)
+    except RuntimeError as e:
+        sys.exit(f"❌ {e}")
+
+    # Until the entry is in tools_db.yml, a failure would leave an orphaned thumbnail
+    # behind that blocks the next attempt, so remove it.
+    try:
+        thumbnail = thumbnail.round_corners()
+        entry = _entry(args, thumbnail=thumbnail.path.relative_to(ROOT).as_posix())
+        print(f"  🖼️  Saved {entry.thumbnail}")
+        database.append(entry.to_yaml())
+    except BaseException:
+        thumbnail.path.unlink(missing_ok=True)
+        raise
+
+    print(f"  📝 Added '{args.name}' to {database.path.name}")
+    ReadmeGenerator(database=database).generate()
+
+
+def _entry(args: argparse.Namespace, *, thumbnail: str) -> ToolEntry:
+    return ToolEntry(
         name=args.name,
         url=args.url,
         source=args.source,
@@ -91,14 +105,6 @@ def cmd_add(args: argparse.Namespace) -> None:
         category=args.category,
         description=args.description,
     )
-
-    if args.dry_run:
-        print(entry.to_yaml())
-        return
-
-    database.append(entry.to_yaml())
-    print(f"  📝 Added '{args.name}' to {database.path.name}")
-    ReadmeGenerator(database=database).generate()
 
 
 def main() -> None:
@@ -121,7 +127,6 @@ def main() -> None:
     add_parser.add_argument("--description", required=True)
     add_parser.add_argument("--source", default=None, help="Source code URL (omit for closed source)")
     add_parser.add_argument("--image", default=None, help="Thumbnail URL or local path, skips og:image lookup")
-    add_parser.add_argument("--screenshot", action="store_true", help="Fall back to a Playwright screenshot")
     add_parser.add_argument("--new-category", action="store_true", help="Allow a category not used yet")
     add_parser.add_argument("--dry-run", action="store_true", help="Print the entry without writing anything")
     add_parser.set_defaults(func=cmd_add)
