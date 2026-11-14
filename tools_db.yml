@@ -163,3 +163,15 @@
     implement it. Design systems are tagged by tech stack and by features like
     code examples, accessibility guidance, and open-source availability, making
     it easy to compare approaches before building your own.
+
+- name: Bundlephobia
+  url: https://bundlephobia.com
+  source: https://github.com/pastelsky/bundlephobia
+  thumbnail: assets/thumbnails/bundlephobia.svg
+  category: Developer Tools
+  description: >
+    A free, open-source tool for finding the cost of adding an npm package to
+    your frontend bundle. Look up any package to see its minified and gzipped
+    size, estimated download time on slow networks, and which dependencies make
+    up its weight. Compare sizes across versions, check exports for tree-
+    shaking, scan a whole package.json, and discover lighter alternatives.

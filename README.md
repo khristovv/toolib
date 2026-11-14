@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **14 tools** · 🗓️ **Last updated:** November 2026
+📚 **15 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -21,7 +21,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 ## Contents
 
 - [Design & Creative](#design--creative) (3)
-- [Developer Tools](#developer-tools) (3)
+- [Developer Tools](#developer-tools) (4)
 - [Games & Tabletop](#games--tabletop) (1)
 - [Music & Audio](#music--audio) (1)
 - [Productivity & Practice](#productivity--practice) (2)
@@ -96,6 +96,21 @@ A free, open-source cartographic poster engine that turns any location in the wo
 | **Source** | [github.com/usebruno/bruno](https://github.com/usebruno/bruno) |
 
 An open-source, offline-first API client and Git-friendly alternative to Postman. Supports REST, GraphQL, gRPC, and WebSocket requests, and stores collections as plain-text files on your filesystem so they can be versioned and reviewed alongside your code. Includes environments, pre/post-request scripting, assertions and tests, and a CLI for running collections in CI. No cloud sync or account required.
+
+---
+
+#### Bundlephobia
+
+<p align="center">
+    <img src="assets/thumbnails/bundlephobia.svg" alt="Bundlephobia" width="381">
+</p>
+
+| | |
+|---|---|
+| **URL** | [bundlephobia.com](https://bundlephobia.com) |
+| **Source** | [github.com/pastelsky/bundlephobia](https://github.com/pastelsky/bundlephobia) |
+
+A free, open-source tool for finding the cost of adding an npm package to your frontend bundle. Look up any package to see its minified and gzipped size, estimated download time on slow networks, and which dependencies make up its weight. Compare sizes across versions, check exports for tree- shaking, scan a whole package.json, and discover lighter alternatives.
 
 ---
 
