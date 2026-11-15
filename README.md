@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **24 tools** · 🗓️ **Last updated:** November 2026
+📚 **25 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -40,9 +40,10 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Dungeon Scrawl](#dungeon-scrawl)
 - [Music & Audio](#music--audio) (1)
   - [MuseScore](#musescore)
-- [Productivity & Practice](#productivity--practice) (2)
+- [Productivity & Practice](#productivity--practice) (3)
   - [MonitorControl](#monitorcontrol)
   - [Monkeytype](#monkeytype)
+  - [NetNewsWire](#netnewswire)
 - [Reference & Research](#reference--research) (6)
   - [Auto Catalog Archive](#auto-catalog-archive)
   - [Dimensions](#dimensions)
@@ -342,6 +343,21 @@ A free, open-source macOS menu bar app that controls the brightness, contrast, a
 | **Source** | [github.com/monkeytypegame/monkeytype](https://github.com/monkeytypegame/monkeytype) |
 
 A minimalistic, highly customizable typing speed test. Features multiple test modes (timed, word count, quotes, custom), real-time WPM and accuracy tracking, themes, smooth caret animations, and an account system to track your progress over time.
+
+---
+
+#### NetNewsWire
+
+<p align="center">
+    <img src="assets/thumbnails/netnewswire.png" alt="NetNewsWire" width="490">
+</p>
+
+| | |
+|---|---|
+| **Website** | [netnewswire.com](https://netnewswire.com) |
+| **Source** | [github.com/Ranchero-Software/NetNewsWire](https://github.com/Ranchero-Software/NetNewsWire) |
+
+A free, open-source RSS reader for Mac, iPhone, and iPad, built as a fast, native app. Supports RSS, Atom, and JSON Feed, with syncing through iCloud or services like Feedbin, Feedly, Inoreader, and FreshRSS. Features smart feeds such as Today and Unread, a clutter-free reader view, keyboard shortcuts, and no tracking or data collection.
 
 ---
 

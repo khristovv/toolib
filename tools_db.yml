@@ -285,3 +285,15 @@
     keys and layers live, with no firmware reflashing. Also includes macros,
     lighting controls, a key tester, and a design mode for loading keyboard
     definitions while developing VIA support for new boards.
+
+- name: NetNewsWire
+  url: https://netnewswire.com
+  source: https://github.com/Ranchero-Software/NetNewsWire
+  thumbnail: assets/thumbnails/netnewswire.png
+  category: Productivity & Practice
+  description: >
+    A free, open-source RSS reader for Mac, iPhone, and iPad, built as a fast,
+    native app. Supports RSS, Atom, and JSON Feed, with syncing through iCloud
+    or services like Feedbin, Feedly, Inoreader, and FreshRSS. Features smart
+    feeds such as Today and Unread, a clutter-free reader view, keyboard
+    shortcuts, and no tracking or data collection.
