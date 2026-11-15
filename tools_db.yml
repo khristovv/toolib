@@ -310,3 +310,15 @@
     e-readers. Also includes a built-in e-book viewer and editor, news downloads
     from websites as e-books, and a content server for reading your library in a
     browser.
+
+- name: BetaList
+  url: https://betalist.com
+  source: null
+  thumbnail: assets/thumbnails/betalist.png
+  category: Reference & Research
+  description: >
+    A community directory of early-stage startups, where founders list products
+    before or around launch and visitors sign up for early access. Browse
+    startups by topic or by day, follow markets you care about, and get a digest
+    of new listings by email. Also lists jobs at early-stage startups and offers
+    founders a way to get first users and feedback.

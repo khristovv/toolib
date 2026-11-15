@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **26 tools** · 🗓️ **Last updated:** November 2026
+📚 **27 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -47,8 +47,9 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 - [Reading & News](#reading--news) (2)
   - [calibre](#calibre)
   - [NetNewsWire](#netnewswire)
-- [Reference & Research](#reference--research) (6)
+- [Reference & Research](#reference--research) (7)
   - [Auto Catalog Archive](#auto-catalog-archive)
+  - [BetaList](#betalist)
   - [Dimensions](#dimensions)
   - [Movie Scene Map](#movie-scene-map)
   - [SaaS is Dead](#saas-is-dead)
@@ -403,6 +404,21 @@ A free, open-source RSS reader for Mac, iPhone, and iPad, built as a fast, nativ
 | **Source** | *(closed source)* |
 
 A massive digital archive of vintage automobile brochures and catalogs from manufacturers around the world. Explore high-quality scans of classic car marketing materials spanning decades, perfect for research, design inspiration, or nostalgic deep dives into automotive history.
+
+---
+
+#### BetaList
+
+<p align="center">
+    <img src="assets/thumbnails/betalist.png" alt="BetaList" width="571">
+</p>
+
+| | |
+|---|---|
+| **Website** | [betalist.com](https://betalist.com) |
+| **Source** | *(closed source)* |
+
+A community directory of early-stage startups, where founders list products before or around launch and visitors sign up for early access. Browse startups by topic or by day, follow markets you care about, and get a digest of new listings by email. Also lists jobs at early-stage startups and offers founders a way to get first users and feedback.
 
 ---
 
