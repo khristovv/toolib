@@ -261,3 +261,15 @@
     calendar view, compare versions, and save pages on demand with Save Page
     Now. Also offers site-wide search, change tracking between captures, and an
     API for programmatic access.
+
+- name: Lorem Picsum
+  url: https://picsum.photos
+  source: https://github.com/DMarby/picsum-photos
+  thumbnail: assets/thumbnails/lorempicsum.png
+  category: Developer Tools
+  description: >
+    A free placeholder image service that serves real photos at any size
+    straight from the URL, such as /200/300 for a 200×300 image. Supports random
+    or specific images by ID, a fixed image per seed, grayscale and blur
+    filters, JPG or WebP output, and a JSON API for listing images and their
+    authors.

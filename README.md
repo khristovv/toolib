@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **22 tools** · 🗓️ **Last updated:** November 2026
+📚 **23 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -24,7 +24,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Excalidraw](#excalidraw)
   - [FigCraft](#figcraft)
   - [TerraInk](#terraink)
-- [Developer Tools](#developer-tools) (9)
+- [Developer Tools](#developer-tools) (10)
   - [Bruno](#bruno)
   - [Bundlephobia](#bundlephobia)
   - [Can I email](#can-i-email)
@@ -32,6 +32,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Crontab Guru](#crontab-guru)
   - [cssdb](#cssdb)
   - [Localtunnel](#localtunnel)
+  - [Lorem Picsum](#lorem-picsum)
   - [Regex101](#regex101)
   - [tweakcn](#tweakcn)
 - [Games & Tabletop](#games--tabletop) (1)
@@ -208,6 +209,21 @@ A database of CSS features tracked by how far they are in the process of becomin
 | **Source** | [github.com/localtunnel/localtunnel](https://github.com/localtunnel/localtunnel) |
 
 A free, open-source tool that exposes a web server running on your machine through a public HTTPS URL, with no DNS or firewall changes. Install it with npm and run lt with your local port to get a shareable link that stays up while the process runs. Handy for sharing work in progress, testing webhooks against your local API, or checking your UI in cloud browsers.
+
+---
+
+#### Lorem Picsum
+
+<p align="center">
+    <img src="assets/thumbnails/lorempicsum.png" alt="Lorem Picsum" width="600">
+</p>
+
+| | |
+|---|---|
+| **Website** | [picsum.photos](https://picsum.photos) |
+| **Source** | [github.com/DMarby/picsum-photos](https://github.com/DMarby/picsum-photos) |
+
+A free placeholder image service that serves real photos at any size straight from the URL, such as /200/300 for a 200×300 image. Supports random or specific images by ID, a fixed image per seed, grayscale and blur filters, JPG or WebP output, and a JSON API for listing images and their authors.
 
 ---
 
