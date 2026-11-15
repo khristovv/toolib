@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **23 tools** · 🗓️ **Last updated:** November 2026
+📚 **24 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -24,7 +24,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Excalidraw](#excalidraw)
   - [FigCraft](#figcraft)
   - [TerraInk](#terraink)
-- [Developer Tools](#developer-tools) (10)
+- [Developer Tools](#developer-tools) (11)
   - [Bruno](#bruno)
   - [Bundlephobia](#bundlephobia)
   - [Can I email](#can-i-email)
@@ -35,6 +35,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Lorem Picsum](#lorem-picsum)
   - [Regex101](#regex101)
   - [tweakcn](#tweakcn)
+  - [VIA](#via)
 - [Games & Tabletop](#games--tabletop) (1)
   - [Dungeon Scrawl](#dungeon-scrawl)
 - [Music & Audio](#music--audio) (1)
@@ -254,6 +255,21 @@ The gold standard online regex tester and debugger. Supports PCRE, Python, JavaS
 | **Source** | [github.com/jnsahaj/tweakcn](https://github.com/jnsahaj/tweakcn) |
 
 A free, open-source visual theme editor for shadcn/ui and Tailwind CSS. Start from a gallery of theme presets or build your own by tweaking colors, typography, and other style properties, with a live preview of real components as you go. Copy the generated theme code straight into your project, so your shadcn/ui app doesn't look like every other one.
+
+---
+
+#### VIA
+
+<p align="center">
+    <img src="assets/thumbnails/via.png" alt="VIA" width="300">
+</p>
+
+| | |
+|---|---|
+| **Website** | [caniusevia.com](https://caniusevia.com) |
+| **Source** | [github.com/the-via/app](https://github.com/the-via/app) |
+
+A free, open-source configurator for QMK-based mechanical keyboards that runs in the browser at usevia.app. Plug in a supported keyboard to remap keys and layers live, with no firmware reflashing. Also includes macros, lighting controls, a key tester, and a design mode for loading keyboard definitions while developing VIA support for new boards.
 
 ---
 
