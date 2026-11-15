@@ -24,7 +24,7 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Excalidraw](#excalidraw)
   - [FigCraft](#figcraft)
   - [TerraInk](#terraink)
-- [Developer Tools](#developer-tools) (11)
+- [Developer Tools](#developer-tools) (10)
   - [Bruno](#bruno)
   - [Bundlephobia](#bundlephobia)
   - [Can I email](#can-i-email)
@@ -35,14 +35,16 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Lorem Picsum](#lorem-picsum)
   - [Regex101](#regex101)
   - [tweakcn](#tweakcn)
-  - [VIA](#via)
 - [Games & Tabletop](#games--tabletop) (1)
   - [Dungeon Scrawl](#dungeon-scrawl)
+- [Hardware & Peripherals](#hardware--peripherals) (2)
+  - [MonitorControl](#monitorcontrol)
+  - [VIA](#via)
+- [Learning & Practice](#learning--practice) (1)
+  - [Monkeytype](#monkeytype)
 - [Music & Audio](#music--audio) (1)
   - [MuseScore](#musescore)
-- [Productivity & Practice](#productivity--practice) (3)
-  - [MonitorControl](#monitorcontrol)
-  - [Monkeytype](#monkeytype)
+- [Reading & News](#reading--news) (1)
   - [NetNewsWire](#netnewswire)
 - [Reference & Research](#reference--research) (6)
   - [Auto Catalog Archive](#auto-catalog-archive)
@@ -259,21 +261,6 @@ A free, open-source visual theme editor for shadcn/ui and Tailwind CSS. Start fr
 
 ---
 
-#### VIA
-
-<p align="center">
-    <img src="assets/thumbnails/via.png" alt="VIA" width="300">
-</p>
-
-| | |
-|---|---|
-| **Website** | [caniusevia.com](https://caniusevia.com) |
-| **Source** | [github.com/the-via/app](https://github.com/the-via/app) |
-
-A free, open-source configurator for QMK-based mechanical keyboards that runs in the browser at usevia.app. Plug in a supported keyboard to remap keys and layers live, with no firmware reflashing. Also includes macros, lighting controls, a key tester, and a design mode for loading keyboard definitions while developing VIA support for new boards.
-
----
-
 ### Games & Tabletop
 
 ---
@@ -290,6 +277,59 @@ A free, open-source configurator for QMK-based mechanical keyboards that runs in
 | **Source** | *(closed source)* |
 
 A free, browser-based dungeon and battlemap maker for tabletop RPGs like D&D and Pathfinder. Build rooms, halls, and scenes in minutes — no downloads or sign-up required. Supports multiple map styles, custom assets, PNG/SVG/PDF export, and direct Roll20 integration.
+
+---
+
+### Hardware & Peripherals
+
+---
+
+#### MonitorControl
+
+<p align="center">
+    <img src="assets/thumbnails/monitorcontrol.png" alt="MonitorControl" width="300">
+</p>
+
+| | |
+|---|---|
+| **Website** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
+| **Source** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
+
+A free, open-source macOS menu bar app that controls the brightness, contrast, and volume of external displays as if they were native Apple displays. Works with Apple keyboard brightness and media keys or custom shortcuts and shows the native macOS on-screen indicators. Combines DDC hardware control with software dimming, and can sync brightness across all your screens.
+
+---
+
+#### VIA
+
+<p align="center">
+    <img src="assets/thumbnails/via.png" alt="VIA" width="300">
+</p>
+
+| | |
+|---|---|
+| **Website** | [caniusevia.com](https://caniusevia.com) |
+| **Source** | [github.com/the-via/app](https://github.com/the-via/app) |
+
+A free, open-source configurator for QMK-based mechanical keyboards that runs in the browser at usevia.app. Plug in a supported keyboard to remap keys and layers live, with no firmware reflashing. Also includes macros, lighting controls, a key tester, and a design mode for loading keyboard definitions while developing VIA support for new boards.
+
+---
+
+### Learning & Practice
+
+---
+
+#### Monkeytype
+
+<p align="center">
+    <img src="assets/thumbnails/monkeytype.png" alt="Monkeytype" width="512">
+</p>
+
+| | |
+|---|---|
+| **Website** | [monkeytype.com](https://monkeytype.com) |
+| **Source** | [github.com/monkeytypegame/monkeytype](https://github.com/monkeytypegame/monkeytype) |
+
+A minimalistic, highly customizable typing speed test. Features multiple test modes (timed, word count, quotes, custom), real-time WPM and accuracy tracking, themes, smooth caret animations, and an account system to track your progress over time.
 
 ---
 
@@ -312,37 +352,7 @@ A free, open-source WYSIWYG music notation editor for composing, arranging, and 
 
 ---
 
-### Productivity & Practice
-
----
-
-#### MonitorControl
-
-<p align="center">
-    <img src="assets/thumbnails/monitorcontrol.png" alt="MonitorControl" width="300">
-</p>
-
-| | |
-|---|---|
-| **Website** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
-| **Source** | [github.com/MonitorControl/MonitorControl](https://github.com/MonitorControl/MonitorControl) |
-
-A free, open-source macOS menu bar app that controls the brightness, contrast, and volume of external displays as if they were native Apple displays. Works with Apple keyboard brightness and media keys or custom shortcuts and shows the native macOS on-screen indicators. Combines DDC hardware control with software dimming, and can sync brightness across all your screens.
-
----
-
-#### Monkeytype
-
-<p align="center">
-    <img src="assets/thumbnails/monkeytype.png" alt="Monkeytype" width="512">
-</p>
-
-| | |
-|---|---|
-| **Website** | [monkeytype.com](https://monkeytype.com) |
-| **Source** | [github.com/monkeytypegame/monkeytype](https://github.com/monkeytypegame/monkeytype) |
-
-A minimalistic, highly customizable typing speed test. Features multiple test modes (timed, word count, quotes, custom), real-time WPM and accuracy tracking, themes, smooth caret animations, and an account system to track your progress over time.
+### Reading & News
 
 ---
 

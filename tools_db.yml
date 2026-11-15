@@ -24,7 +24,7 @@
   url: https://monkeytype.com
   source: https://github.com/monkeytypegame/monkeytype
   thumbnail: assets/thumbnails/monkeytype.png
-  category: Productivity & Practice
+  category: Learning & Practice
   description: >
     A minimalistic, highly customizable typing speed test. Features multiple
     test modes (timed, word count, quotes, custom), real-time WPM and accuracy tracking,
@@ -92,7 +92,7 @@
   url: https://github.com/MonitorControl/MonitorControl
   source: https://github.com/MonitorControl/MonitorControl
   thumbnail: assets/thumbnails/monitorcontrol.png
-  category: Productivity & Practice
+  category: Hardware & Peripherals
   description: >
     A free, open-source macOS menu bar app that controls the brightness,
     contrast, and volume of external displays as if they were native Apple
@@ -278,7 +278,7 @@
   url: https://caniusevia.com
   source: https://github.com/the-via/app
   thumbnail: assets/thumbnails/via.png
-  category: Developer Tools
+  category: Hardware & Peripherals
   description: >
     A free, open-source configurator for QMK-based mechanical keyboards that
     runs in the browser at usevia.app. Plug in a supported keyboard to remap
@@ -290,7 +290,7 @@
   url: https://netnewswire.com
   source: https://github.com/Ranchero-Software/NetNewsWire
   thumbnail: assets/thumbnails/netnewswire.png
-  category: Productivity & Practice
+  category: Reading & News
   description: >
     A free, open-source RSS reader for Mac, iPhone, and iPad, built as a fast,
     native app. Supports RSS, Atom, and JSON Feed, with syncing through iCloud

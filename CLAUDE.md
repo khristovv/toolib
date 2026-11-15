@@ -71,6 +71,6 @@ pip install -r requirements.txt
 
 Entries are separated by a blank line. Descriptions use the `>` folded style.
 
-Categories currently in use: `Design & Creative`, `Developer Tools`, `Games & Tabletop`, `Music & Audio`, `Productivity & Practice`, `Reference & Research`.
+Categories currently in use: `Design & Creative`, `Developer Tools`, `Games & Tabletop`, `Hardware & Peripherals`, `Learning & Practice`, `Music & Audio`, `Reading & News`, `Reference & Research`.
 
 The README sorts categories and tools alphabetically. Contents links use the same anchors GitHub generates for headings (`AnchorRegistry`), so any category or tool name works.
