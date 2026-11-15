@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **27 tools** · 🗓️ **Last updated:** November 2026
+📚 **28 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -47,10 +47,11 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
 - [Reading & News](#reading--news) (2)
   - [calibre](#calibre)
   - [NetNewsWire](#netnewswire)
-- [Reference & Research](#reference--research) (7)
+- [Reference & Research](#reference--research) (8)
   - [Auto Catalog Archive](#auto-catalog-archive)
   - [BetaList](#betalist)
   - [Dimensions](#dimensions)
+  - [Killed by Google](#killed-by-google)
   - [Movie Scene Map](#movie-scene-map)
   - [SaaS is Dead](#saas-is-dead)
   - [The Component Gallery](#the-component-gallery)
@@ -434,6 +435,21 @@ A community directory of early-stage startups, where founders list products befo
 | **Source** | *(closed source)* |
 
 Dimensions.com is an ongoing reference database of dimensioned drawings documenting the standard measurements and sizes of the everyday objects and spaces that make up our world. Created as a universal resource to better communicate the basic properties, systems, and logics of our built environment, Dimensions.com is a global platform for increasing public and professional knowledge of life and design.
+
+---
+
+#### Killed by Google
+
+<p align="center">
+    <img src="assets/thumbnails/killedbygoogle.png" alt="Killed by Google" width="571">
+</p>
+
+| | |
+|---|---|
+| **Website** | [killedbygoogle.com](https://killedbygoogle.com) |
+| **Source** | [github.com/codyogden/killedbygoogle](https://github.com/codyogden/killedbygoogle) |
+
+An open-source graveyard of Google products, services, and devices that have been shut down. Each entry gives the product's lifespan, a short obituary of what it did, and a link to more about it. The list can be filtered by apps, services, or hardware and searched by name, and its data is kept in a public JSON file that anyone can contribute to.
 
 ---
 

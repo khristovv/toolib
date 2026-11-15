@@ -322,3 +322,15 @@
     startups by topic or by day, follow markets you care about, and get a digest
     of new listings by email. Also lists jobs at early-stage startups and offers
     founders a way to get first users and feedback.
+
+- name: Killed by Google
+  url: https://killedbygoogle.com
+  source: https://github.com/codyogden/killedbygoogle
+  thumbnail: assets/thumbnails/killedbygoogle.png
+  category: Reference & Research
+  description: >
+    An open-source graveyard of Google products, services, and devices that have
+    been shut down. Each entry gives the product's lifespan, a short obituary of
+    what it did, and a link to more about it. The list can be filtered by apps,
+    services, or hardware and searched by name, and its data is kept in a public
+    JSON file that anyone can contribute to.
