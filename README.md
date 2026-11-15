@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **25 tools** · 🗓️ **Last updated:** November 2026
+📚 **26 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -44,7 +44,8 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Monkeytype](#monkeytype)
 - [Music & Audio](#music--audio) (1)
   - [MuseScore](#musescore)
-- [Reading & News](#reading--news) (1)
+- [Reading & News](#reading--news) (2)
+  - [calibre](#calibre)
   - [NetNewsWire](#netnewswire)
 - [Reference & Research](#reference--research) (6)
   - [Auto Catalog Archive](#auto-catalog-archive)
@@ -353,6 +354,21 @@ A free, open-source WYSIWYG music notation editor for composing, arranging, and 
 ---
 
 ### Reading & News
+
+---
+
+#### calibre
+
+<p align="center">
+    <img src="assets/thumbnails/calibre.png" alt="calibre" width="600">
+</p>
+
+| | |
+|---|---|
+| **Website** | [calibre-ebook.com](https://calibre-ebook.com) |
+| **Source** | [github.com/kovidgoyal/calibre](https://github.com/kovidgoyal/calibre) |
+
+A free, open-source e-book manager for Windows, macOS, and Linux that handles a whole library in one place. Converts between formats like EPUB, MOBI, AZW3, and PDF, edits metadata and covers, and syncs books to e-readers. Also includes a built-in e-book viewer and editor, news downloads from websites as e-books, and a content server for reading your library in a browser.
 
 ---
 

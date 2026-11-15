@@ -297,3 +297,16 @@
     or services like Feedbin, Feedly, Inoreader, and FreshRSS. Features smart
     feeds such as Today and Unread, a clutter-free reader view, keyboard
     shortcuts, and no tracking or data collection.
+
+- name: calibre
+  url: https://calibre-ebook.com
+  source: https://github.com/kovidgoyal/calibre
+  thumbnail: assets/thumbnails/calibre.png
+  category: Reading & News
+  description: >
+    A free, open-source e-book manager for Windows, macOS, and Linux that
+    handles a whole library in one place. Converts between formats like EPUB,
+    MOBI, AZW3, and PDF, edits metadata and covers, and syncs books to
+    e-readers. Also includes a built-in e-book viewer and editor, news downloads
+    from websites as e-books, and a content server for reading your library in a
+    browser.
