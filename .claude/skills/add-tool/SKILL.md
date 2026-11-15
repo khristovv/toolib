@@ -34,7 +34,14 @@ If it reports no usable thumbnail, retry with `--image <url>` pointing at a good
 
 ## 4. Check the thumbnail
 
-Read the saved image. It should clearly represent the tool at 600px wide. If it's blank, tiny, a generic placeholder, or unrelated, find a better image and overwrite the file at the same path (keep the same extension, or update `thumbnail` in `tools_db.yml` and rerun `python -m toolib generate`).
+Read the saved image. It should clearly represent the tool at 600px wide. If it's blank, tiny, a generic placeholder, or unrelated, replace it, trying these in order:
+
+1. A hero image or large logo from the page itself.
+2. A screenshot of the site's header or hero section. Ask the user for one. It shows the product as people see it, which is what they prefer.
+
+Don't build composites (collages of the site's content, logos placed on generated backgrounds) unless the user asks for one.
+
+Overwrite the file at the same path (keep the same extension, or update `thumbnail` in `tools_db.yml`). Then round its corners again with `python -c "from pathlib import Path; from toolib.thumbnail import Thumbnail; Thumbnail(Path('<path>')).round_corners()"`, and run `python -m toolib generate`.
 
 ## 5. Report
 
