@@ -14,8 +14,8 @@ add       Downloads the thumbnail, appends the entry to tools_db.yml, and
           regenerates README.md.
 
 The thumbnail is --image if given, otherwise the page's og:image or twitter:image.
-Raster thumbnails with solid corners get rounded corners cut into them (JPEGs
-become PNGs, since they can't be transparent).
+Raster thumbnails wider than 1200px are scaled down, and those with solid corners
+get rounded corners cut into them (JPEGs become PNGs, since they can't be transparent).
 """
 
 import argparse
@@ -91,7 +91,7 @@ def cmd_add(args: argparse.Namespace) -> None:
     # Until the tool is in tools_db.yml, a failure would leave an orphaned thumbnail
     # behind that blocks the next attempt, so remove it.
     try:
-        thumbnail = thumbnail.round_corners()
+        thumbnail = thumbnail.shrink().round_corners()
         tool.thumbnail = thumbnail.path.relative_to(ROOT).as_posix()
         print(f"  🖼️  Saved {tool.thumbnail}")
         database.add(tool)

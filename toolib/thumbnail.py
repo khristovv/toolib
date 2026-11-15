@@ -34,6 +34,9 @@ class Thumbnail:
     # Corner radius as it appears in the README, so every thumbnail looks the same
     # regardless of its real size.
     CORNER_RADIUS = 20
+    # Twice MAX_WIDTH, so thumbnails stay sharp on high-DPI screens without keeping
+    # multi-megabyte screenshots in the repo.
+    MAX_STORED_WIDTH = 1200
 
     def __init__(self, path: Path):
         self.path = path
@@ -71,6 +74,34 @@ class Thumbnail:
             scale = min(scale, 1)
 
         return round(width * scale)
+
+    def shrink(self) -> "Thumbnail":
+        """Scale a raster thumbnail down to MAX_STORED_WIDTH if it's wider, keeping its format.
+
+        SVGs scale freely and GIFs may be animated, so both are left alone.
+        """
+        if self.suffix in (".svg", ".gif"):
+            return self
+
+        with Image.open(self.path) as image:
+            if image.width <= self.MAX_STORED_WIDTH:
+                return self
+
+            # Palette images can only be resized with nearest-neighbour, which looks jagged.
+            if image.mode in ("P", "1"):
+                image = image.convert("RGBA")
+
+            height = round(image.height * self.MAX_STORED_WIDTH / image.width)
+            image = image.resize((self.MAX_STORED_WIDTH, height), Image.LANCZOS)
+
+        if self.suffix in (".jpg", ".jpeg"):
+            image.convert("RGB").save(self.path, quality=90, optimize=True)
+        elif self.suffix == ".webp":
+            image.save(self.path, quality=90)
+        else:
+            image.save(self.path, optimize=True)
+
+        return self
 
     def round_corners(self) -> "Thumbnail":
         """Cut rounded corners into a raster thumbnail and return it (JPEGs become PNGs).

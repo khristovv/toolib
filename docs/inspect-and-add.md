@@ -65,9 +65,15 @@ The saved file is then read back with `Thumbnail.size`. If it can't be read, it'
 - Raster images are opened with Pillow.
 - SVGs are parsed as XML and must have a `viewBox`. That's where their aspect ratio comes from.
 
+### Shrinking
+
+`add` then calls `Thumbnail.shrink()`. Raster images wider than `MAX_STORED_WIDTH` (1200px, twice the README's 600px) are scaled down with Lanczos, keeping their aspect ratio and format, so the repo doesn't fill up with multi-megabyte screenshots. Palette PNGs are converted to RGBA first, because Pillow can only resize them with nearest-neighbour. JPEGs and WebPs are saved at quality 90. SVGs and GIFs are skipped, the same as for rounding.
+
+Shrinking happens before rounding, so the corner mask is drawn at the final size.
+
 ### Rounding corners
 
-`add` then calls `Thumbnail.round_corners()`:
+Next `add` calls `Thumbnail.round_corners()`:
 
 - SVGs and GIFs are skipped (the GIF so it keeps its animation).
 - Images with any transparent corner pixel are skipped. They're logos or icons with their own shape.
@@ -89,7 +95,7 @@ The checks in `add` run in this order, and any failure stops `add` before it cha
 3. With `--dry-run`, the entry is printed and nothing else happens. No thumbnail is fetched, so the `thumbnail` path ends in a placeholder `<ext>`.
 4. No thumbnail with the same slug exists yet.
 
-Next the thumbnail is fetched, saved and rounded, and the entry is written by `ToolDatabase.add`.
+Next the thumbnail is fetched, saved, shrunk and rounded, and the entry is written by `ToolDatabase.add`.
 
 ### Writing `tools_db.yml`
 

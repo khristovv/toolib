@@ -41,7 +41,7 @@ Read the saved image. It should clearly represent the tool at 600px wide. If it'
 
 Don't build composites (collages of the site's content, logos placed on generated backgrounds) unless the user asks for one.
 
-Overwrite the file at the same path (keep the same extension, or update `thumbnail` in `tools_db.yml`). Then round its corners again with `python -c "from pathlib import Path; from toolib.thumbnail import Thumbnail; Thumbnail(Path('<path>')).round_corners()"`, and run `python -m toolib generate`.
+Overwrite the file at the same path (keep the same extension, or update `thumbnail` in `tools_db.yml`). Then shrink it and round its corners again with `python -c "from pathlib import Path; from toolib.thumbnail import Thumbnail; Thumbnail(Path('<path>')).shrink().round_corners()"`, and run `python -m toolib generate`.
 
 ## 5. Report
 
