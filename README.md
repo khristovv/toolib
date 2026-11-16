@@ -2,7 +2,7 @@
 
 > A curated personal library of cool websites and tools worth bookmarking.
 
-📚 **28 tools** · 🗓️ **Last updated:** November 2026
+📚 **29 tools** · 🗓️ **Last updated:** November 2026
 
 ---
 
@@ -24,12 +24,13 @@ Toolib is a non-commercial project. It isn't monetized in any way, and it never 
   - [Excalidraw](#excalidraw)
   - [FigCraft](#figcraft)
   - [TerraInk](#terraink)
-- [Developer Tools](#developer-tools) (10)
+- [Developer Tools](#developer-tools) (11)
   - [Bruno](#bruno)
   - [Bundlephobia](#bundlephobia)
   - [Can I email](#can-i-email)
   - [Carbon](#carbon)
   - [Crontab Guru](#crontab-guru)
+  - [crt.sh](#crtsh)
   - [cssdb](#cssdb)
   - [Localtunnel](#localtunnel)
   - [Lorem Picsum](#lorem-picsum)
@@ -186,6 +187,21 @@ A free, open-source tool for creating and sharing beautiful images of your sourc
 | **Source** | *(closed source)* |
 
 A quick and simple editor for cron schedule expressions, made by Cronitor. Type an expression and it is instantly translated into plain English, with the next scheduled run times and a reference for each field's allowed values and special characters. Includes a library of common cron examples to copy from.
+
+---
+
+#### crt.sh
+
+<p align="center">
+    <img src="assets/thumbnails/crtsh.png" alt="crt.sh" width="600">
+</p>
+
+| | |
+|---|---|
+| **Website** | [crt.sh](https://crt.sh) |
+| **Source** | [github.com/crtsh](https://github.com/crtsh) |
+
+A free search engine for Certificate Transparency logs, showing every publicly logged TLS certificate issued for a domain. Search by domain, organization, fingerprint, or certificate ID, with % wildcards to uncover subdomains. Each certificate links to its full decoded details, revocation status, and lint results, and results are also available as JSON or an Atom feed for monitoring new issuances.
 
 ---
 

@@ -334,3 +334,16 @@
     what it did, and a link to more about it. The list can be filtered by apps,
     services, or hardware and searched by name, and its data is kept in a public
     JSON file that anyone can contribute to.
+
+- name: crt.sh
+  url: https://crt.sh
+  source: https://github.com/crtsh
+  thumbnail: assets/thumbnails/crtsh.png
+  category: Developer Tools
+  description: >
+    A free search engine for Certificate Transparency logs, showing every
+    publicly logged TLS certificate issued for a domain. Search by domain,
+    organization, fingerprint, or certificate ID, with % wildcards to uncover
+    subdomains. Each certificate links to its full decoded details, revocation
+    status, and lint results, and results are also available as JSON or an Atom
+    feed for monitoring new issuances.
